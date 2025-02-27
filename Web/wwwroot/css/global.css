@@ -56,37 +56,4 @@ html{
   padding: 0;
   }
 
-.subtitle {
-  display: flex;
-  align-items: center;
-  margin: 0.83em 0;
-  width: 100%;
-  gap: 12px;
-  /* 使用 gap 來統一管理元素間距 */
-}
 
-.subtitle::before {
-  content: "";
-  width: 5px;
-  height: 30px;
-  border-radius: 20px;
-  background: var(--warn-color);
-  display: block;
-  flex-shrink: 0;
-}
-
-.subtitle img {
-  display: block;
-  flex-shrink: 0;
-}
-
-.h2-subtitle {
-  display: flex;
-  align-items: center;
-  font-size: 1.5em;
-  font-weight: bold;
-  margin: 0;
-  /* 移除預設邊距 */
-  gap: 12px;
-  /* 標題和圖片之間的間距 */
-}
