@@ -1,0 +1,92 @@
+/* CSS 初始化 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 定義顏色變數 */
+:root {
+  --primary-color: #a47764;
+  --primary-color-light: #8b645a;
+  --warn-color: #FFB300 ;
+  --warn-color-light: #fed26a;
+  --error-color: #e60000;
+  --secondary-color: #2ecc71;
+}
+
+
+.mobile-only {
+  display: block; 
+}
+
+@media (min-width: 769px) { 
+  .mobile-only {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .desktop-only {
+    display: none;
+  }
+}
+
+/* 基本樣式 */
+body {
+  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+  color: #404040;
+  overflow-x: hidden;
+  /* 隱藏水平滾動條 */
+  width: 100%;
+  max-width: 100%;
+  border-top: 10px solid var(--primary-color);
+  margin: 0;
+  /* 確保沒有多餘的邊距 */
+  padding: 0;
+  /* 避免內部元素影響 */
+}
+
+html{
+  overflow-x: hidden !important;
+  /* 強制隱藏水平滾動 */
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0;
+  padding: 0;
+  }
+
+.subtitle {
+  display: flex;
+  align-items: center;
+  margin: 0.83em 0;
+  width: 100%;
+  gap: 12px;
+  /* 使用 gap 來統一管理元素間距 */
+}
+
+.subtitle::before {
+  content: "";
+  width: 5px;
+  height: 30px;
+  border-radius: 20px;
+  background: var(--warn-color);
+  display: block;
+  flex-shrink: 0;
+}
+
+.subtitle img {
+  display: block;
+  flex-shrink: 0;
+}
+
+.h2-subtitle {
+  display: flex;
+  align-items: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0;
+  /* 移除預設邊距 */
+  gap: 12px;
+  /* 標題和圖片之間的間距 */
+}

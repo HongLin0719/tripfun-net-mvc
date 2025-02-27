@@ -1,0 +1,216 @@
+.aircraft-div {
+  position: relative;
+  overflow: hidden;
+  padding: 60px 0px 30px 0px;
+  margin-top: -30px;
+}
+
+.aircraft,
+.aircraft-tw {
+  height: 80px;
+  background-color: #838383;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.aircraft::before {
+  content: "";
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  will-change: transform, opacity;
+  background-image: url('https://travel.hotaigo.com.tw/aircraft.svg');
+  animation: takeoff 10s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+}
+
+@keyframes takeoff {
+  0% {
+    transform: translateX(50px);
+    margin-top: 0;
+    opacity: 1;
+  }
+
+  10% {
+    margin-top: 0;
+  }
+
+  40% {
+    margin-top: -160px;
+    transform: translateX(110vw);
+    opacity: 1;
+  }
+
+  45% {
+    margin-top: -160px;
+    transform: translateX(110vw);
+    opacity: 0;
+  }
+
+  50% {
+    margin-top: -20px;
+    transform: translateX(-60px);
+    opacity: 0;
+  }
+
+  51% {
+    margin-top: -20px;
+    transform: translateX(-60px);
+    opacity: 1;
+  }
+
+  55% {
+    margin-top: -3px;
+    opacity: 1;
+  }
+
+  70% {
+    margin-top: 0px;
+    transform: translateX(50px);
+  }
+
+  90%,
+  100% {
+    margin-top: 0px;
+    transform: translateX(50px);
+    opacity: 1;
+  }
+}
+
+.aircraft-runway {
+  animation: runway 10s ease;
+  animation-iteration-count: infinite;
+  position: absolute;
+  width: 10000px;
+  height: 4px;
+  background-image: repeating-linear-gradient(90deg, white, white 44px, transparent 44px, transparent 88px);
+  will-change: transform;
+}
+
+@keyframes runway {
+  0% {
+    transform: translateX(0);
+
+  }
+
+  80%,
+  100% {
+    transform: translateX(-2992px);
+  }
+}
+
+.aircraft-runway::before,
+.aircraft-runway-tw::before {
+  top: -34px;
+  content: "";
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  left: 0;
+  height: 2px;
+}
+
+.aircraft-runway::after,
+.aircraft-runway-tw::after {
+  bottom: -34px;
+  content: "";
+  position: absolute;
+  width: 100%;
+  background-color: #fff;
+  left: 0;
+  height: 2px;
+}
+
+.aircraft-tw::before {
+  content: "";
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+  will-change: transform, opacity;
+
+  background-image: url('https://travel.hotaigo.com.tw/aircraft-local.svg');
+  animation: landing 10s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+}
+
+@keyframes landing {
+  0% {
+    transform: translateX(50px) rotate(180deg);
+    margin-top: 0;
+    opacity: 1;
+  }
+
+  10% {
+    margin-top: 0;
+    opacity: 1;
+    transform: translateX(-100px) rotate(180deg);
+  }
+
+  11% {
+    opacity: 0;
+    transform: translateX(-100px) rotate(180deg);
+  }
+
+  11.1% {
+    opacity: 0;
+    transform: translateX(110vw) rotate(180deg);
+  }
+
+  11.2% {
+    margin-top: -160px;
+    opacity: 1;
+    transform: translateX(110vw) rotate(180deg);
+  }
+
+  40% {
+    margin-top: -3px;
+  }
+
+  55% {
+    margin-top: 0px;
+  }
+
+  70%,
+  100% {
+    margin-top: 0px;
+    transform: translateX(50px) rotate(180deg);
+  }
+}
+
+.aircraft-runway-tw {
+  animation: runway-tw 10s ease;
+  animation-iteration-count: infinite;
+  position: absolute;
+  width: 10000px;
+  height: 4px;
+  background-image: repeating-linear-gradient(90deg, white, white 44px, transparent 44px, transparent 88px);
+  will-change: transform;
+}
+
+@keyframes runway-tw {
+  0% {
+    transform: translateX(-2992px);
+
+  }
+
+  80%,
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+.aircraft-runway {
+  animation: runway 10s ease;
+  animation-iteration-count: infinite;
+  position: absolute;
+  width: 10000px;
+  height: 4px;
+  background-image: repeating-linear-gradient(90deg, white, white 44px, transparent 44px, transparent 88px);
+  will-change: transform;
+}

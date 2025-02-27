@@ -1,0 +1,228 @@
+.hot-trip-section {
+  padding: 0 20px;
+}
+
+
+.hot-trip__container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 15px;
+}
+
+.hot-trip__cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+
+.hot-trip__card--large {
+  display: grid;
+  grid-template-rows: 80% 20%;
+  text-decoration: none;
+  color: inherit;
+  box-sizing: border-box;
+}
+
+.hot-trip__card:not(.hot-trip__card--large) {
+  display: grid;
+  grid-template-rows: 60% 40%;
+  text-decoration: none;
+  color: inherit;
+  box-sizing: border-box;
+}
+
+.hot-trip__card--large {
+  height: 500px;
+}
+
+.hot-trip__card:not(.hot-trip__card--large) {
+  height: calc((500px - 15px) / 2);
+}
+
+.hot-trip__image-container {
+  overflow: hidden;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, .2), 0 2px 2px rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .12);
+  border-radius: 10px;
+}
+
+
+.hot-trip__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+}
+
+.hot-trip__image:hover {
+  transform: scale(1.2);
+  /* 放大 1.2 倍 */
+  opacity: 1;
+  /* 變清晰 */
+  transition: all 1s;
+}
+
+
+.hot-trip__content {
+  padding: 0.2rem;
+  box-sizing: border-box;
+}
+
+.hot-trip__title {
+  margin-bottom: 6px;
+  color: #404040;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  height: 32px;
+}
+
+.hot-trip__subtitle {
+  background-color: var(--warn-color) !important;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 12px;
+  min-height: 12px;
+  font-weight: normal;
+  display: inline-flex;
+  align-items: center;
+  vertical-align: baseline;
+  margin-top: 6px;
+  padding: 4px 8px;
+}
+
+.hot-trip__footer {
+  text-align: right;
+}
+
+.hot-trip__price-1 {
+  margin-right: 4px;
+  font-size: 12px;
+  color: #959595;
+  text-decoration: line-through;
+}
+
+.hot-trip__price-1::before {
+  content: "TWD";
+  margin-right: 4px;
+}
+
+.hot-trip__price-2 {
+  margin-right: 4px;
+  color: var(--error-color);
+  font-weight: 500;
+}
+
+.hot-trip__price-2::before {
+  content: "TWD";
+  margin-right: 4px;
+  color: #000;
+}
+
+@media (max-width: 992px) {
+  .hot-trip {
+    display: none;
+  }
+}
+
+.img-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hot-trip__card {
+  position: relative;
+}
+
+.hot-trip__card:hover {
+  opacity: .8;
+}
+
+
+.img-label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 2px 8px;
+  border-radius: 8px;
+  z-index: 10;
+  width: auto;
+  height: auto;
+
+  background-color: #fff;
+  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+  font-size: 11px;
+  color: #404040;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.hot-trip-label-img {
+  width: 12px;
+  height: 12px;
+  min-width: 12px;
+  min-height: 12px;
+}
+
+.subtitle {
+  display: flex;
+  align-items: center;
+  margin: 0.83em 0;
+  width: 100%;
+  gap: 12px;
+  /* 使用 gap 來統一管理元素間距 */
+}
+
+.subtitle::before {
+  content: "";
+  width: 5px;
+  height: 30px;
+  border-radius: 20px;
+  background: var(--warn-color);
+  display: block;
+  flex-shrink: 0;
+}
+
+.subtitle img {
+  display: block;
+  flex-shrink: 0;
+}
+
+.h2-subtitle {
+  display: flex;
+  align-items: center;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0;
+  /* 移除預設邊距 */
+  gap: 12px;
+  /* 標題和圖片之間的間距 */
+}
+
+
+@media screen and (max-width: 768px) {
+  .activity-block {
+    display: flex;
+    gap: 8px;
+  }
+
+}
+
+@media (max-width: 450px) {
+  .activity-block a,.activity-block div{
+    width: 72px;
+    height: 36px;
+    font-size: 12px;
+  }
+}

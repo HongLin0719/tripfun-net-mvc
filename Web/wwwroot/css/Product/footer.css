@@ -1,0 +1,227 @@
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-left {
+    display: none !important;
+    flex-direction: column;
+  }
+
+  .footer-right {
+    width: 100%;
+    padding: 0;
+    margin-top: 20px;
+  }
+
+  .footer-column {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+
+}
+
+
+.footer {
+  background-color: #dbdbdb;
+  padding-top: 40px;
+  margin-top: 40px;
+
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px 30px 20px;
+  align-items: flex-start;
+}
+
+/* 左側區塊：兩欄 */
+.footer-left {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-column {
+  width: 48%;
+}
+
+.footer-column h4 {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 5px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.footer-column ul li a:hover {
+  color: #787878;
+}
+
+/* 右側區塊 */
+.footer-right {
+  width: 50%;
+  padding-left: 20px;
+}
+
+.footer-right h4 {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.footer-right p {
+  margin-bottom: 8px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #959595;
+}
+
+.footer-right a {
+  color: var(--primary-color);
+}
+
+/* 版權資訊 */
+.footer-bottom {
+  max-width: 1200px;
+  margin: 20px auto 0;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 12px;
+  color: #959595;
+  border-top: 1px solid rgba(179, 179, 179, .5);
+}
+
+    .footer {
+      background-color: #dbdbdb;
+      padding-top: 40px;
+      margin-top: 40px;
+
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 20px 30px 20px;
+      align-items: flex-start;
+    }
+
+    /* 左側區塊：兩欄 */
+    .footer-left {
+      width: 50%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .footer-column {
+      width: 48%;
+    }
+
+    .footer-column h4 {
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-column ul li {
+      margin-bottom: 5px;
+    }
+
+    .footer-column ul li a {
+      text-decoration: none;
+      color: #333;
+      font-size: 14px;
+    }
+
+    .footer-column ul li a:hover {
+      color: #787878;
+    }
+
+    /* 右側區塊 */
+    .footer-right {
+      width: 50%;
+      padding-left: 20px;
+    }
+
+    .footer-right h4 {
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+
+    .footer-right p {
+      margin-bottom: 8px;
+      font-size: 12px;
+      line-height: 1.5;
+      color: #959595;
+    }
+
+    .footer-right a {
+      color: var(--primary-color);
+    }
+
+    /* 版權資訊 */
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 20px auto 0;
+      padding: 20px 0;
+      text-align: center;
+      font-size: 12px;
+      color: #959595;
+      border-top: 1px solid rgba(179, 179, 179, .5);
+    }
+
+
+    @media (max-width: 768px) {
+
+      .footer-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .footer-left {
+        display: none;
+      }
+
+      .footer-right {
+        width: 100%;
+        padding: 0;
+      }
+
+      /* 左側的兩欄改為垂直堆疊 */
+      .footer-left {
+        flex-direction: column;
+      }
+
+      .footer-column {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      .footer-right {
+        margin-top: 20px;
+      }
+    }

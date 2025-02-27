@@ -1,0 +1,42 @@
+@media screen and (max-width: 991.98px) {
+  .pc-top-category-menu {
+    display: none;
+  }
+}
+
+.category-swiper {
+  padding: 0 40px;
+  position: relative;
+}
+
+.category-swiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.category-link {
+  white-space: nowrap;
+  padding: 8px 16px;
+  transition: all 0.3s;
+  font-family: "Noto Sans TC", "微軟正黑體", sans-serif;
+  font-size: 16px;
+  color: #404040;
+  text-decoration: none;
+}
+
+.category-link:hover {
+  color: var(--primary-color);
+}
+
+.category-swiper-next,
+.category-swiper-prev {
+  --swiper-navigation-size: 20px;
+  padding: 12px;
+  border-radius: 50%;
+}
+
+.category-swiper-next::after,
+.category-swiper-prev::after {
+  color: #c0c0c1;
+  font-weight: bold;
+}
