@@ -2,7 +2,7 @@
 
 namespace Web.Controllers
 {
-    public class TripController : Controller
+    public class ScheduleController : Controller
     {
         public IActionResult Index()
         {

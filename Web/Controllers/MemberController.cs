@@ -2,7 +2,7 @@
 
 namespace Web.Controllers
 {
-    public class BookingController : Controller
+    public class MemberController : Controller
     {
         public IActionResult Index()
         {
