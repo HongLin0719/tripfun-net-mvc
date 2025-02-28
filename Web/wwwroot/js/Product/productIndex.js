@@ -306,4 +306,4 @@ createApp({
   },
 })
   .use(ElementPlus)
-  .mount("#app");
+  .mount("#productIndex");

@@ -1,6 +1,10 @@
+.top-deco {
+    border-top: 10px solid var(--primary-color);
+}
+
 .header-topbar {
-  padding: 2vh 4vw;
-  height: 97.5px;
+    padding: 2vh 4vw;
+    height: 97.5px;
 }
 
 .desktop-search {
