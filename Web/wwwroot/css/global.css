@@ -40,7 +40,7 @@ body {
   /* 隱藏水平滾動條 */
   width: 100%;
   max-width: 100%;
-  border-top: 10px solid var(--primary-color);
+/*  border-top: 10px solid var(--primary-color);*/
   margin: 0;
   /* 確保沒有多餘的邊距 */
   padding: 0;
