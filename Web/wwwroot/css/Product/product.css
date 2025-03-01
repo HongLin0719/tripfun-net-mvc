@@ -5,14 +5,18 @@
 }
 
 @media screen and (min-width: 992px) {
-  .country-title::after {
-    content: "";
-    display: block;
-    flex-grow: 1;
-    height: 1px;
-    border-bottom: 1px solid var(--primary-color);
-    margin-left: 12px;
-  }
+    .product-swiper-8{
+        display:none;
+    }
+
+    .country-title::after {
+        content: "";
+        display: block;
+        flex-grow: 1;
+        height: 1px;
+        border-bottom: 1px solid var(--primary-color);
+        margin-left: 12px;
+    }
 }
 
 .product-swiper-button-prev,

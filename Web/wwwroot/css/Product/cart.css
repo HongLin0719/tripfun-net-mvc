@@ -1,0 +1,65 @@
+* {
+    font-family: 思源黑體, 微軟正黑體, 蘋方黑體, 華康麗黑體, Helvetica, Arial, sans-serif, serif;
+}
+
+:root {
+    --bs-primary: #a47764 !important;
+    --el-color-primary: #a47764 !important;
+}
+
+.step-active {
+    color: var(--bs-primary);
+    font-weight: bold;
+}
+
+.bottom-reminder {
+    margin-top: 30px;
+    padding: 20px;
+    border-top: 1px solid #ddd;
+    font-size: 0.9rem;
+}
+
+.icon {
+    margin: 3px 4px 0px;
+    color: gray;
+    font-size: 14px;
+}
+
+.form-check-input:checked {
+    background-color: var(--bs-primary) !important;
+    border-color: var(--bs-primary) !important;
+}
+
+/* 錯誤輸入框樣式 */
+.is-invalid {
+    border: 1px solid red;
+    background-color: #fff5f5;
+    border-radius: 4px;
+}
+
+
+.alert-info {
+    background-color: var(--bs-primary) !important;
+    border-color: var(--bs-primary) !important;
+    color: #fff !important;
+}
+
+.accordion-button {
+    background-color: var(--bs-primary) !important;
+    color: #fff !important;
+    border: 1px solid #ddd !important;
+    box-shadow: none !important;
+}
+
+.custom-btn {
+    background-color: #a47764;
+    border-color: #a47764;
+    color: white;
+}
+
+.custom-btn:hover {
+    background-color: #8b645a;
+    border-color: #8b645a;
+    color: white;
+    font-weight: bold;
+}

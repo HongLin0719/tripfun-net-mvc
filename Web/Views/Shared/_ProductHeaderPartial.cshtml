@@ -1,0 +1,77 @@
+﻿
+@{
+    ViewData["Title"] = "_ProductHeaderPartial";
+}
+
+
+    <header>
+        <!-- navbar.css -->
+        <!-- 導覽列 -->
+        <div class="container header-topbar d-flex align-items-center justify-content-between">
+            <!-- 左邊 LOGO -->
+            <a href="#" aria-label="去趣chicTrip | 旅遊商城">
+                <img src="~/image/FunTrip_logo.png"
+                     alt="Logo"
+                     width="107"
+                     height="50" />
+            </a>
+            <!-- 搜尋欄 (桌面版) -->
+            <el-input v-model="searchQuery"
+                      class="desktop-search mx-auto"
+                      placeholder="輸入目的地、景點、體驗行程或活動名稱...">
+                <template #prefix>
+                    <el-icon class="header-search-icon">
+                        <search />
+                    </el-icon>
+                </template>
+            </el-input>
+            <!-- 右邊按鈕區塊 -->
+            <div class="d-flex">
+                <a href="#" class="el-button header-login-text">旅遊規劃必備APP</a>
+                <a href="#" class="el-button header-login-text">登入/註冊</a>
+                <!-- 992px以下顯示 -->
+                <a href="#" class="el-button header-login-icon">
+                    <el-icon>
+                        <User />
+                    </el-icon>
+                </a>
+                <a href="#" class="el-button">
+                    <el-icon>
+                        <shopping-cart />
+                    </el-icon>
+                </a>
+            </div>
+        </div>
+
+        <!-- 手機版搜尋欄 -->
+        <div class="container">
+            <div class="mobile-search w-100">
+                <el-input v-model="searchQuery"
+                          placeholder="輸入目的地、景點、體驗行程或活動名稱...">
+                    <template #prefix>
+                        <el-icon class="header-search-icon">
+                            <search />
+                        </el-icon>
+                    </template>
+                </el-input>
+            </div>
+        </div>
+
+        <!-- header-category.css -->
+        <!-- 分類列表 -->
+        <section class="container pc-top-category-menu">
+            <div class="category-swiper swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"
+                         v-for="(item, index) in categories"
+                         :key="index">
+                        <a href="#" class="category-link"> {{ item }} </a>
+                    </div>
+                </div>
+
+                <div class="swiper-button-next category-swiper-next"></div>
+                <div class="swiper-button-prev category-swiper-prev"></div>
+            </div>
+        </section>
+    </header>
+
