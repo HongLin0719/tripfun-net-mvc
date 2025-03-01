@@ -1,0 +1,980 @@
+﻿<!-- 橫式Modal1 (示範：左欄圖片 / 右欄資訊) -->
+<div class="modal fade"
+     id="infoModal"
+     tabindex="-1"
+     aria-labelledby="infoModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog custom-size">
+        <div class="modal-content custom-content">
+            <!-- 左欄：圖片滿版 -->
+            <div class="modal-left">
+                <div class="col-12 modal-left-col">
+                    <div class="container">
+                        <img src="https://picsum.photos/1024/768?random=10"
+                             alt="預覽圖片" />
+                    </div>
+
+                    <div class="col-md-6 left-bottom-overlay">
+                        <div class="d-flex align-items-center">
+                            <img class="avatar"
+                                 src="https://picsum.photos/100/100/?random=20"
+                                 alt="頭像" />
+                            <div class="ms-2">
+                                <div class="fw-bold">趣旅官方</div>
+                                <div style="font-size: 0.85rem">645 人追蹤</div>
+                            </div>
+                            <a href="#" class="btn btn-sm btn-light ms-3" target="_blank">
+                                造訪
+                            </a>
+                            <button type="button"
+                                    class="btn btn-sm btn-light ms-2"
+                                    id="btnLike">
+                                讚 0
+                            </button>
+                            <div class="ms-auto dropdown">
+                                <button class="btn btn-sm btn-light"
+                                        type="button"
+                                        data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                    <i class="bi bi-three-dots"></i>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><a class="dropdown-item" href="#">檢舉</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 右欄：header / body / footer -->
+            <div class="modal-right">
+                <!-- 標題 + 關閉按鈕 -->
+                <div class="modal-right-header">
+                    <div class="mt-4 place-name">丹迪旅店 - 天母店</div>
+                    <button type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                </div>
+                <!-- 中間可捲動區 -->
+                <div class="modal-right-body">
+                    <div class="d-flex align-items-center mt-3">
+                        <div class="review-count me-2">Google 評價</div>
+                        <div class="rating-score me-2">4.5</div>
+                        <div class="review-count me-2">(1.2k 則評論)</div>
+                        <div class="trip-count me-2">|</div>
+                        <div class="trip-count">加入行程 127 次</div>
+                    </div>
+
+                    <div class="mt-3">
+                        <div class="info-line">
+                            <i class="bi bi-geo-alt"></i>
+                            <span class="fw-bold">天母地區</span>
+                        </div>
+                        <div class="info-line">
+                            <i class="bi bi-search"></i>
+                            <button type="button"
+                                    class="btn btn-outline-secondary"
+                                    data-bs-dismiss="modal">
+                                評論
+                            </button>
+                            <button type="button"
+                                    class="btn btn-outline-secondary"
+                                    data-bs-dismiss="modal">
+                                照片
+                            </button>
+                            <button type="button"
+                                    class="btn btn-outline-secondary"
+                                    data-bs-dismiss="modal">
+                                文章
+                            </button>
+                        </div>
+                        <div class="info-line">
+                            <i class="bi bi-globe2"></i>
+                            <a href="https://tianmu.dandyhotel.com.tw"
+                               target="_blank"
+                               class="text-decoration-none">
+                                https://tianmu.dandyhotel.com.tw
+                            </a>
+                        </div>
+                        <div class="info-line">
+                            <i class="bi bi-telephone"></i>
+                            <a href="tel:0228732222" class="text-decoration-none">
+                                (02) 2873-2222
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="voice-translation mt-3">
+                        <button class="btn btn-outline-secondary">
+                            <i class="bi bi-mic-fill"></i> 語音翻譯
+                        </button>
+                    </div>
+                </div>
+                <!-- 底部按鈕 -->
+                <div class="modal-right-footer m-0">
+                    <div class="bottom-btn-box p-0 m-0">
+                        <div class="left-box">
+                            <button class="btn btn-outline-secondary me-1"
+                                    data-bs-toggle="tooltip"
+                                    title="貢獻影音">
+                                <i class="bi bi-camera-fill"></i>
+                            </button>
+                            <button class="btn btn-outline-secondary me-1"
+                                    data-bs-toggle="tooltip"
+                                    title="分享">
+                                <i class="bi bi-share-fill"></i>
+                            </button>
+                            <button class="btn btn-outline-secondary me-1"
+                                    data-bs-toggle="tooltip"
+                                    title="加到收藏">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                            <button class="btn btn-outline-secondary me-3"
+                                    data-bs-toggle="tooltip"
+                                    title="導航">
+                                <i class="fa-solid fa-location-arrow"></i>
+                            </button>
+                        </div>
+                        <div class="right-box">
+                            <button type="button"
+                                    class="btn btn-add-schedule"
+                                    data-bs-dismiss="modal">
+                                新增行程
+                                <i class="bi bi-plus-circle-fill me-1"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 橫式Modal2 (示範：左欄地圖 / 右欄表單) -->
+<div class="modal fade"
+     id="customSpotModal"
+     tabindex="-1"
+     aria-labelledby="customSpotModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog custom-size">
+        <div class="modal-content custom-content">
+            <!-- 左欄：地圖滿版 -->
+            <div class="modal-left">
+                <div class="fake-dropzone">這裡可放地圖（示意）</div>
+                <!-- <button
+                  type="button"
+                  class="btn btn-danger"
+                  style="
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                  "
+                >
+                  <i class="bi bi-plus-circle fs-3"></i>
+                </button> -->
+            </div>
+            <div class="modal-right">
+                <div class="modal-right-header">
+                    <h5 class="mt-4 mb-3 fw-bold">新增自訂景點</h5>
+                    <button type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                </div>
+                <div class="modal-right-body">
+                    <!-- 景點名稱 -->
+                    <div class="custom-spot-input">
+                        <input type="text"
+                               class="form-control"
+                               id="spotName"
+                               placeholder="輸入景點名稱" />
+                    </div>
+
+                    <!-- 地址(選填) + icon (同一行) -->
+                    <div class="custom-spot-input">
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <input type="text"
+                                   class="form-control"
+                                   id="spotAddress"
+                                   placeholder="地址(選填)" />
+                        </div>
+                    </div>
+
+                    <!-- 分類 + icon (同一行) -->
+                    <div class="custom-spot-input">
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="fa-solid fa-list"></i>
+                            <select class="form-select" id="spotCategory">
+                                <option value="景點">景點</option>
+                                <option value="美食">美食</option>
+                                <option value="購物">購物</option>
+                                <option value="住宿">住宿</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- 相片(改為貢獻影音按鈕) -->
+                    <div class="custom-spot-input">
+                        <label for="spotPhoto" class="form-label">相片</label>
+                        <button type="button"
+                                class="btn btn-primary w-100 btn-lg"
+                                data-bs-toggle="modal"
+                                data-bs-target="#contributeVideoModal"
+                                data-bs-dismiss="modal">
+                            <i class="bi bi-camera-fill me-2"></i>
+                            <br />貢獻影音
+                        </button>
+                    </div>
+
+                    <!-- 備忘錄 -->
+                    <div class="custom-spot-input">
+                        <label for="spotDesc" class="form-label">備忘錄</label>
+                        <textarea class="form-control"
+                                  id="spotDesc"
+                                  rows="3"
+                                  placeholder="記下怕忘記的資訊..."></textarea>
+                    </div>
+                </div>
+                <div class="modal-right-footer">
+                    <!-- 加到收藏(膠囊形狀) -->
+                    <button type="button"
+                            class="btn btn-primary w-100 btn-capsule"
+                            data-bs-dismiss="modal">
+                        加到收藏
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 橫式Modal3 (示範：貢獻影音) -->
+<div class="modal fade"
+     id="contributeVideoModal"
+     tabindex="-1"
+     aria-labelledby="contributeVideoModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog custom-size">
+        <div class="modal-content custom-content">
+            <!-- 左側：拖曳上傳區 -->
+            <div class="modal-left">
+                <div class="fake-dropzone flex-column">
+                    <div class="container">
+                        <i class="bi bi-file-earmark-arrow-up fs-1"></i>
+                        <p class="mt-3 mb-1">將影音檔案拖曳到這裡</p>
+                        <p class="mb-3">
+                            或
+                            <a href="#" class="text-decoration-underline">選擇檔案</a>
+                        </p>
+                        <p class="upload-hint">
+                            檔案長度限制：60秒<br />
+                            檔案大小限制：500MB
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- 右側：影音屬性設定 -->
+            <div class="modal-right">
+                <div class="modal-right-header">
+                    <h5 class="mt-4 mb-3 fw-bold">貢獻影音</h5>
+                    <button type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+
+                    <!-- 小標題 + 條款說明 -->
+                    <div class="fw-bold mb-1">
+                        觀看權限
+                        <small class="text-muted">
+                            公開代表已同意
+                            <a href="#">隱私權限條款</a>
+                        </small>
+                    </div>
+                </div>
+                <div class="modal-right-body">
+                    <!-- 選項群組 (公開 / 私人) -->
+                    <div class="d-flex flex-column gap-3 mt-2">
+                        <!-- 公開 -->
+                        <label class="border p-3 rounded-3 d-flex align-items-center"
+                               style="cursor: pointer">
+                            <!-- Radio -->
+                            <input type="radio"
+                                   name="privacyOption"
+                                   class="form-check-input me-2"
+                                   id="privacyPublic"
+                                   checked />
+                            <!-- 文字說明 -->
+                            <div>
+                                <!-- 圖示 + 標題 -->
+                                <div class="fw-bold">
+                                    <i class="fa-solid fa-earth-americas me-2"></i>
+                                    公開
+                                </div>
+                                <!-- 換行說明 -->
+                                <div class="text-muted" style="font-size: 0.85rem">
+                                    趣旅審核後，所有人都看得到
+                                </div>
+                            </div>
+                        </label>
+
+                        <!-- 私人 -->
+                        <label class="border p-3 rounded-3 d-flex align-items-center"
+                               style="cursor: pointer">
+                            <!-- Radio -->
+                            <input type="radio"
+                                   name="privacyOption"
+                                   class="form-check-input me-2"
+                                   id="privacyPrivate" />
+                            <!-- 文字說明 -->
+                            <div>
+                                <div class="fw-bold">
+                                    <i class="fa-solid fa-lock me-2"></i>
+                                    私人
+                                </div>
+                                <div class="text-muted" style="font-size: 0.85rem">
+                                    只有我看得到
+                                </div>
+                            </div>
+                        </label>
+                    </div>
+
+                    <!-- 造訪連結 (選填) -->
+                    <div class="mt-3 mb-4">
+                        <label for="visitLink" class="form-label fw-bold">造訪連結（選填）</label>
+                        <br /><small class="text-muted">
+                            觀看權限設為「私人」時，他人看不見此造訪連結
+                        </small>
+                        <input type="url"
+                               class="form-control"
+                               id="visitLink"
+                               placeholder="https://..." />
+                    </div>
+                </div>
+                <div class="modal-right-footer">
+                    <!-- 確認上傳按鈕 -->
+                    <button type="button"
+                            class="btn btn-primary w-100 btn-capsule"
+                            data-bs-dismiss="modal">
+                        確認上傳
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 橫式Modal4 (示範：要加在哪個行程？) -->
+<div class="modal fade"
+     id="addToWhereModal"
+     tabindex="-1"
+     aria-labelledby="addToWhereModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog custom-size">
+        <div class="modal-content custom-content">
+            <!-- 左側：插圖(示意) -->
+            <div class="modal-left">
+                <div class="container">
+                    <img src="https://picsum.photos/300/200/?random=10"
+                         alt="(示意插圖)"
+                         class="d-block mx-auto mb-3" />
+                </div>
+            </div>
+            <!-- 右側：行程清單 + 下拉天數 -->
+            <div class="modal-right">
+                <div class="modal-right-header">
+                    <h5 class="mt-4 mb-3">要加在哪個行程？</h5>
+                    <button type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                </div>
+                <div class="modal-right-body">
+                    <!-- 行程清單示範 -->
+                    <div class="itinerary-list">
+                        <!-- 行程1：Dean的行程 (4天) -->
+                        <div class="itinerary-item">
+                            <!-- Header 區: 行程名稱 + 小字 (日期/天數) + 下拉按鈕 -->
+                            <div class="itinerary-item-header"
+                                 data-bs-toggle="collapse"
+                                 data-bs-target="#deanItinerary"
+                                 aria-expanded="false"
+                                 aria-controls="deanItinerary">
+                                <div>
+                                    <p class="itinerary-title fw-bold fs-4 mb-0">
+                                        Dean的行程
+                                    </p>
+                                    <small class="text-muted fs-6">2025/03/23 - 4天</small>
+                                    <i class="bi bi-chevron-down"></i>
+                                </div>
+                            </div>
+                            <!-- 下拉天數清單 -->
+                            <div class="collapse day-list mt-2" id="deanItinerary">
+                                <!-- 第1天 ~ 第4天 -->
+                                <div class="day-item">
+                                    <span class="fw-bold">第1天</span>
+                                    <small class="text-muted ms-2">03/23 (週四) - 0個景點</small>
+                                </div>
+                                <div class="day-item">
+                                    <span class="fw-bold">第2天</span>
+                                    <small class="text-muted ms-2">03/24 (週五) - 0個景點</small>
+                                </div>
+                                <div class="day-item">
+                                    <span class="fw-bold">第3天</span>
+                                    <small class="text-muted ms-2">03/25 (週六) - 0個景點</small>
+                                </div>
+                                <div class="day-item">
+                                    <span class="fw-bold">第4天</span>
+                                    <small class="text-muted ms-2">03/26 (週日) - 0個景點</small>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /itinerary-item -->
+                        <!-- 行程2：到嘉義就是要吃！ - 複製 (4天) -->
+                        <div class="itinerary-item">
+                            <div class="itinerary-item-header"
+                                 data-bs-toggle="collapse"
+                                 data-bs-target="#chiayiItinerary"
+                                 aria-expanded="false"
+                                 aria-controls="chiayiItinerary">
+                                <div>
+                                    <p class="itinerary-title fw-bold fs-4 mb-0">
+                                        到嘉義就是要吃！ - 複製
+                                    </p>
+                                    <small class="text-muted fs-6">2024/07/04 - 4天</small>
+                                    <i class="bi bi-chevron-down"></i>
+                                </div>
+                            </div>
+                            <div class="collapse day-list mt-2" id="chiayiItinerary">
+                                <div class="day-item">
+                                    <span class="fw-bold">第1天</span>
+                                    <small class="text-muted ms-2">07/04 - 0個景點</small>
+                                </div>
+                                <div class="day-item">
+                                    <span class="fw-bold">第2天</span>
+                                    <small class="text-muted ms-2">07/05 - 0個景點</small>
+                                </div>
+                                <div class="day-item">
+                                    <span class="fw-bold">第3天</span>
+                                    <small class="text-muted ms-2">07/06 - 0個景點</small>
+                                </div>
+                                <div class="day-item">
+                                    <span class="fw-bold">第4天</span>
+                                    <small class="text-muted ms-2">07/07 - 0個景點</small>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /itinerary-item -->
+                        <!-- 更多行程可自行增加 -->
+                    </div>
+                </div>
+                <div class="modal-right-footer">
+                    <!-- 建立新行程按鈕 -->
+                    <button type="button" class="btn btn-outline-primary w-100">
+                        <i class="bi bi-plus-circle me-1"></i>建立新行程
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 橫式Modal5 (示範：要加在哪天？) -->
+<div class="modal fade"
+     id="whereToPutModal"
+     tabindex="-1"
+     aria-labelledby="whereToPutModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog custom-size">
+        <div class="modal-content custom-content">
+            <div class="modal-left">
+                <!-- 返回按鈕 (左上角) -->
+                <button type="button"
+                        class="btn-back"
+                        data-bs-dismiss="modal"
+                        data-bs-toggle="modal"
+                        data-bs-target="#addToWhereModal">
+                    <i class="bi bi-chevron-left"></i>
+                </button>
+                <div class="fake-dropzone">這裡可放地圖（示意）</div>
+                <!-- <button
+                  type="button"
+                  class="btn btn-danger"
+                  style="
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                  "
+                >
+                  <i class="bi bi-plus-circle fs-3"></i>
+                </button> -->
+            </div>
+            <div class="modal-right">
+                <div class="modal-right-header border-0 pb-0">
+                    <h5 class="mt-4 mb-3">要加在哪？</h5>
+                    <button type="button"
+                            class="btn-close"
+                            data-bs-dismiss="modal"
+                            aria-label="Close"></button>
+                    <!-- 分頁 (Day 1 / Day 2) -->
+                    <ul class="nav nav-tabs" id="dayTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active"
+                                    id="day1-tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#day1Content"
+                                    type="button"
+                                    role="tab"
+                                    aria-controls="day1Content"
+                                    aria-selected="true">
+                                第1天
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link"
+                                    id="day2-tab"
+                                    data-bs-toggle="tab"
+                                    data-bs-target="#day2Content"
+                                    type="button"
+                                    role="tab"
+                                    aria-controls="day2Content"
+                                    aria-selected="false">
+                                第2天
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-right-body" style="background-color: #f3f4f8">
+                    <!-- 分頁內容 -->
+                    <div class="tab-content" id="dayTabsContent">
+                        <!-- 第1天 -->
+                        <div class="tab-pane fade show active"
+                             id="day1Content"
+                             role="tabpanel"
+                             aria-labelledby="day1-tab">
+                            <!-- Checkbox 小卡列表 (示範三個) -->
+                            <div class="container my-3">
+                                <!-- <h4>第1天</h4> -->
+                                <!-- 小卡 1 -->
+                                <label class="spot-card" for="day1spot1">
+                                    <!-- 注意：同一天數的 Radio 要用相同的 name，例如 name="day1Group" -->
+                                    <input type="radio"
+                                           name="day1Group"
+                                           class="form-check-input"
+                                           id="day1spot1"
+                                           data-new-name-id="newName1" />
+                                    <div>
+                                        <!-- 第一行：本來的景點名稱 -->
+                                        <div>打狗英國領事館</div>
+                                        <!-- 第二行：新景點名稱 (預設灰色 → 被選到就變橘) -->
+                                        <div id="newName1" class="new-spot-name">
+                                            華山1914文化創意產業園區
+                                        </div>
+                                        <div>老李大腸包小腸</div>
+                                    </div>
+                                </label>
+
+                                <!-- 小卡 2 -->
+                                <label class="spot-card" for="day1spot2">
+                                    <input type="radio"
+                                           name="day1Group"
+                                           class="form-check-input"
+                                           id="day1spot2"
+                                           data-new-name-id="newName2" />
+                                    <div>
+                                        <div>老李大腸包小腸</div>
+                                        <div id="newName2" class="new-spot-name">
+                                            華山1914文化創意產業園區
+                                        </div>
+                                        <div>高雄港都嘎嗚王</div>
+                                    </div>
+                                </label>
+
+                                <!-- 小卡 3 -->
+                                <label class="spot-card" for="day1spot3">
+                                    <input type="radio"
+                                           name="day1Group"
+                                           class="form-check-input"
+                                           id="day1spot3"
+                                           data-new-name-id="newName3" />
+                                    <div>
+                                        <div>高雄港都嘎嗚王</div>
+                                        <div id="newName3" class="new-spot-name">
+                                            華山1914文化創意產業園區
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- 第2天 -->
+                        <div class="tab-pane fade"
+                             id="day2Content"
+                             role="tabpanel"
+                             aria-labelledby="day2-tab">
+                            <!-- Checkbox 小卡列表 (示範兩個) -->
+                            <div class="container my-3">
+                                <!-- <h4>第2天</h4> -->
+                                <!-- 小卡 1 -->
+                                <label class="spot-card" for="day2spot1">
+                                    <!-- 注意：同一天數的 Radio 要用相同的 name，例如 name="day1Group" -->
+                                    <input type="radio"
+                                           name="day2Group"
+                                           class="form-check-input"
+                                           id="day2spot1"
+                                           data-new-name-id="newName1" />
+                                    <div>
+                                        <!-- 第一行：本來的景點名稱 -->
+                                        <div>旗津海產街</div>
+                                        <!-- 第二行：新景點名稱 (預設灰色 → 被選到就變橘) -->
+                                        <div id="newName1" class="new-spot-name">
+                                            華山1914文化創意產業園區
+                                        </div>
+                                        <div>六合夜市</div>
+                                    </div>
+                                </label>
+
+                                <!-- 小卡 2 -->
+                                <label class="spot-card" for="day2spot2">
+                                    <input type="radio"
+                                           name="day2Group"
+                                           class="form-check-input"
+                                           id="day2spot2"
+                                           data-new-name-id="newName2" />
+                                    <div>
+                                        <div>六合夜市</div>
+                                        <div id="newName2" class="new-spot-name">
+                                            華山1914文化創意產業園區
+                                        </div>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-right-footer">
+                    <button type="button"
+                            class="btn btn-primary w-100 btn-capsule"
+                            data-bs-dismiss="modal">
+                        確定新增
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 直式Modal1：建立新行程 -->
+<div class="modal fade"
+     id="createTripModal"
+     tabindex="-1"
+     aria-labelledby="createTripModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog custom-modal-dialog">
+        <div class="modal-content custom-fixed-size">
+            <!-- Modal Header -->
+            <div class="modal-header border-0">
+                <h2 class="fw-bold mb-0 text-center w-100">行程設定</h2>
+                <button type="button"
+                        class="btn-close position-absolute end-0 me-3"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+            </div>
+            <!-- Modal Body (可捲動) -->
+            <div class="modal-body">
+                <!-- 你的表單內容 -->
+                <h5 class="mb-2 text-start">封面照片</h5>
+                <div class="trip-cover mb-3">
+                    <img src="https://picsum.photos/id/5/436/200" alt="封面圖" />
+                    <button class="btn-change-cover">
+                        <i class="bi bi-pencil me-2"></i>更換
+                    </button>
+                </div>
+                <!-- 行程資訊表單... -->
+                <div class="mb-3">
+                    <label for="tripName" class="form-label fw-bold">行程名稱</label>
+                    <input type="text"
+                           class="form-control"
+                           id="tripName"
+                           placeholder="給行程取個名字吧" />
+                </div>
+                <div class="row">
+                    <div class="col-6 mb-3">
+                        <label for="startDate" class="form-label fw-bold">出發日期</label>
+                        <input type="date" class="form-control" id="startDate" />
+                    </div>
+                    <div class="col-6 mb-3">
+                        <label for="endDate" class="form-label fw-bold">結束日期</label>
+                        <input type="date" class="form-control" id="endDate" />
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="transportation" class="form-label fw-bold">主要交通方式</label>
+                    <select class="form-select" id="transportation">
+                        <option value="自訂">自訂</option>
+                        <option value="走路">走路</option>
+                        <option value="汽車">汽車</option>
+                        <option value="大眾運輸">大眾運輸</option>
+                        <option value="機車">機車</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="tripNote" class="form-label fw-bold">自訂</label>
+                    <input type="text"
+                           class="form-control"
+                           id="tripNote"
+                           placeholder="其他備註..." />
+                </div>
+            </div>
+            <!-- Modal Footer (固定在底部) -->
+            <div class="modal-footer d-flex">
+                <button type="button"
+                        class="btn btn-secondary flex-fill rounded-pill"
+                        data-bs-dismiss="modal">
+                    取消
+                </button>
+                <button type="button"
+                        class="btn btn-primary flex-fill rounded-pill"
+                        data-bs-dismiss="modal">
+                    完成
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 直式Modal2：分享行程 / 邀請共編 (同一Modal, 透過 Tabs 切換) -->
+<div class="modal fade"
+     id="shareInviteModal"
+     tabindex="-1"
+     aria-labelledby="shareInviteModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog custom-modal-dialog">
+        <div class="modal-content custom-fixed-size share-modal-body">
+            <div class="container mb-3">
+                <button type="button"
+                        class="btn-close position-absolute end-0 me-3"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+            </div>
+
+            <div class="modal-header border-0 d-block">
+                <!-- nav-pills or nav-tabs -->
+                <ul class="nav nav-pills nav-fill share-tabs"
+                    id="shareTab"
+                    role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active"
+                                id="share-tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#shareTabPane"
+                                type="button"
+                                role="tab"
+                                aria-controls="shareTabPane"
+                                aria-selected="true">
+                            分享行程
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link"
+                                id="invite-tab"
+                                data-bs-toggle="tab"
+                                data-bs-target="#inviteTabPane"
+                                type="button"
+                                role="tab"
+                                aria-controls="inviteTabPane"
+                                aria-selected="false">
+                            邀請共編
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div class="modal-body-none position-relative">
+                <div class="tab-content mt-3" id="shareTabContent">
+                    <!-- 分頁1：分享行程 -->
+                    <div class="tab-pane fade show active text-center"
+                         id="shareTabPane"
+                         role="tabpanel"
+                         aria-labelledby="share-tab">
+                        <div class="qr-code-wrapper my-3">
+                            <img src="~/images/Home/dmRrqO_qrcode.png" alt="QR CODE" />
+                        </div>
+                        <p class="text-muted">手機掃描條碼，即可查看此行程</p>
+                        <div class="container">
+                            <p class="ctrl-title">其他方式</p>
+                            <div class="share-btn-container">
+                                <div class="item">
+                                    <a href="#" class="share-btn text-decoration-none">
+                                        <i class="bi bi-link-45deg"></i>
+                                    </a>
+                                    <span class="small">複製連結</span>
+                                </div>
+                                <div class="item">
+                                    <a href="#" class="share-btn text-decoration-none">
+                                        <i class="bi bi-file-earmark-text"></i>
+                                    </a>
+                                    <span class="small">行程摘要</span>
+                                </div>
+                                <div class="item">
+                                    <a href="#" class="share-btn text-decoration-none">
+                                        <i class="bi bi-envelope-fill"></i>
+                                    </a>
+                                    <span class="small">Email</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 分頁2：邀請共編 -->
+                    <div class="tab-pane fade text-center"
+                         id="inviteTabPane"
+                         role="tabpanel"
+                         aria-labelledby="invite-tab">
+                        <div class="mb-2 d-flex justify-content-center align-items-center">
+                            <div class="invite-dropdown">
+                                <button class="invite-dropdown-toggle mt-3"
+                                        onclick="toggleInviteDropdown()">
+                                    僅供檢視 <i class="bi bi-caret-down-fill"></i>
+                                </button>
+                                <ul class="invite-dropdown-menu p-0"
+                                    id="inviteDropdownMenu">
+                                    <li onclick="selectInviteOption('僅供檢視')">
+                                        <span>僅供檢視</span>
+                                    </li>
+                                    <li onclick="selectInviteOption('可編輯')">
+                                        <span>可編輯</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="qr-code-wrapper my-3">
+                            <img src="~/images/Home/dmRrqO_qrcode.png" alt="QR CODE" />
+                        </div>
+                        <p class="text-muted mb-1">手機掃描條碼，即可查看此行程</p>
+                        <p class="text-muted" style="font-size: 0.9rem">
+                            24 小時內有效
+                        </p>
+                        <div class="mt-3 mb-2">
+                            <button class="btn btn-outline-primary">
+                                <i class="bi bi-link-45deg"></i>複製連結
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- modal-body end -->
+
+            <div class="modal-footer border-0 d-none">
+                <!-- 如果需要底部按鈕可放這邊；若無，可留空 -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 直式Modal3：選擇要加入的清單 -->
+<div class="modal fade"
+     id="chooseListModal"
+     tabindex="-1"
+     aria-labelledby="chooseListModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog custom-modal-dialog">
+        <div class="modal-content custom-fixed-size list-modal">
+            <div class="modal-header border-0">
+                <h2 class="fw-bold mb-0 text-center w-100">選擇要加入的清單</h2>
+                <button type="button"
+                        class="btn-close position-absolute end-0 me-3"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-4">
+                <div class="mt-3 mb-4">
+                    <button type="button"
+                            class="btn w-100 btn-outline-primary"
+                            data-bs-toggle="modal"
+                            data-bs-target="#createListModal"
+                            data-bs-dismiss="modal">
+                        <i class="bi bi-plus-circle me-1"></i>新增清單
+                    </button>
+                </div>
+                <label class="list-check">
+                    <div class="list-info">
+                        <input type="checkbox" />
+                        <div>
+                            <div>宜蘭私藏</div>
+                            <small class="text-muted">3個景點</small>
+                        </div>
+                    </div>
+                </label>
+                <label class="list-check">
+                    <div class="list-info">
+                        <input type="checkbox" />
+                        <div>
+                            <div>口袋清單</div>
+                            <small class="text-muted">1個景點</small>
+                        </div>
+                    </div>
+                </label>
+            </div>
+            <div class="modal-footer border-0">
+                <!-- 已選擇 X 個 + 底部按鈕 -->
+                <span class="text-muted">已選擇 <span class="fw-bold count-total">0</span> 個</span>
+                <button type="button"
+                        class="btn btn-primary btn-capsule"
+                        data-bs-dismiss="modal">
+                    確定
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 直式Modal4：新增清單 -->
+<div class="modal fade"
+     id="createListModal"
+     tabindex="-1"
+     aria-labelledby="createListModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog custom-modal-dialog">
+        <div class="modal-content custom-fixed-size list-modal">
+            <div class="modal-header border-0">
+                <h2 class="fw-bold mb-0 text-center w-100">新增清單</h2>
+                <button type="button"
+                        class="btn-close position-absolute end-0 me-3"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-4">
+                <h2 class="fw-bold mb-4 text-center text-danger-emphasis fs-1">
+                    <i class="bi bi-pin-map-fill"></i>
+                </h2>
+                <div class="mb-3">
+                    <label for="listName" class="form-label fw-bold">清單名稱</label>
+                    <input type="text"
+                           class="form-control"
+                           id="listName"
+                           placeholder="幫清單取個名字吧..." />
+                </div>
+                <div class="mb-4">
+                    <label for="listDesc" class="form-label fw-bold">清單說明</label>
+                    <textarea class="form-control"
+                              id="listDesc"
+                              rows="3"
+                              maxlength="150"
+                              placeholder="幫清單加點註記吧..."></textarea>
+                    <div class="text-end text-muted" style="font-size: 0.85rem">
+                        最多150字
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer border-0">
+                <button type="button"
+                        class="btn btn-primary btn-capsule w-100"
+                        data-bs-dismiss="modal">
+                    確定
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

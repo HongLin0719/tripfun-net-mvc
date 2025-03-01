@@ -420,14 +420,18 @@
 	</section>
 </div>
 
+@* @await Html.PartialAsync("_ModalPartial") *@
+
 @section TOPCSS {
 	@* asp-append-version="true" 用來確保當 CSS 檔案更新時，瀏覽器能夠重新載入最新的版本，而不是使用快取版本。 *@
 	<link href="~/css/index/index.css" rel="stylesheet" asp-append-version="true" />
 	<!-- Leaflet (OpenStreetMap) -->
 	<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+	<link href="~/css/index/modal.css" rel="stylesheet" />
 }
 @section ENDJS {
 	<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 	<script src="~/js/index/index.js" rel="stylesheet" asp-append-version="true"></script>
+	<script src="~/js/index/modal.js"></script>
 	<!-- 引入 Leaflet.js -->
 }
