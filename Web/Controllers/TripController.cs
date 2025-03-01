@@ -8,5 +8,13 @@ namespace Web.Controllers
         {
             return View();
         }
+        public IActionResult Search()
+        {
+            return View();
+        }
+        public IActionResult Input()
+        {
+            return View();
+        }
     }
 }

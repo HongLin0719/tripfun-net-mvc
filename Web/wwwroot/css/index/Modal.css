@@ -1,0 +1,635 @@
+/* 覆寫所有按鈕背景、邊框與文字顏色 */
+.btn {
+  background-color: #a47764 !important;
+  border-color: #a47764 !important;
+  color: #fff !important;
+}
+/* 如果有 hover 狀態，也一起設定 */
+.btn:hover {
+  background-color: #8b645a !important;
+  border-color: #8b645a !important;
+  /* opacity: 0.9; */
+  font-weight: bold;
+}
+/* 統一控制所有 Modal 的大小與佈局 */
+.modal-dialog.custom-size {
+  width: 1032px; /* 總寬度：左664 + 右368 */
+  max-width: 1032px; /* 防止Bootstrap預設的max-width限制 */
+  height: calc(100vh - 160px);
+  /* margin: auto; */
+  /* 使其置中顯示 */
+  /* 如果想讓Modal可垂直置中，可考慮 margin: auto 以及 .modal-dialog-centered */
+}
+.modal-content.custom-content {
+  width: 100%;
+  height: 100%;
+  display: flex; /* 左右並排 */
+  overflow: hidden; /* 防止外溢 */
+  flex-direction: row;
+}
+
+/* 左欄：固定寬664px，高100% */
+.modal-left {
+  width: 664px;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  position: relative;
+  background-color: #000;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  /* 若需要容器捲動，可改 overflow: auto;
+         但通常左欄放滿版圖片/地圖就用 cover 即可 */
+}
+/* 圖片或地圖滿版 */
+.modal-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* 右欄：固定寬368px，高100%，上下三區塊：header / body / footer */
+.modal-right {
+  width: 368px;
+  height: 100%;
+  display: flex;
+  flex-direction: column; /* 垂直排列：標題、可捲動區、底部按鈕 */
+  overflow: hidden; /* 由子元素控制捲動 */
+}
+
+/* 右欄 - 頂部(標題) */
+.modal-right-header {
+  flex: 0 0 auto; /* 高度由內容撐開 */
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+/* 關閉按鈕置於右上角 */
+.modal-right-header .btn-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+/* 右欄 - 中間(可捲動) */
+.modal-right-body {
+  flex: 1 1 auto; /* 讓此區塊可彈性擴張 */
+  overflow-y: auto; /* 超出時顯示捲軸 */
+  padding: 1rem;
+}
+
+/* 右欄 - 底部(按鈕列) */
+.modal-right-footer {
+  flex: 0 0 auto; /* 高度由內容決定 */
+  padding: 1rem;
+  border-top: 1px solid #ddd;
+  align-items: center;
+}
+
+/* ----------------------------- */
+
+/* 控制彈窗寬度 */
+.custom-modal-dialog {
+  max-width: 900px;
+}
+/* 左側圖片/地圖/拖曳區塊：常用樣式 */
+.modal-left-col {
+  position: relative;
+  background-color: #000;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.modal-left-col > img:not(.avatar) {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+/* 底部 Overlay：放置頭像、名稱、追蹤人數、按鈕等 */
+.left-bottom-overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+.avatar {
+  max-width: 36px;
+  max-height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.bottom-btn-box {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.left-box {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+}
+
+/* 右側資訊區塊 */
+.modal-right-col {
+  padding: 1rem;
+  position: relative;
+  min-height: 300px;
+}
+/* 地點名稱或標題 */
+.place-name {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+/* 小字顏色 */
+.text-muted-small {
+  font-size: 0.9rem;
+  color: #666;
+}
+/* 評分與評論數 */
+.rating-score {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ff5722;
+}
+.review-count {
+  font-size: 0.9rem;
+  color: #999;
+}
+.trip-count {
+  font-size: 0.9rem;
+  color: #999;
+}
+/* 通用行資訊(圖示 + 文字) */
+.info-line {
+  margin-top: 0.5rem;
+}
+.info-line i {
+  color: #6c757d;
+  margin-right: 6px;
+}
+/* 固定在右下角的新增行程按鈕 */
+.btn-add-schedule {
+  background-color: #ff9800;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  transition: transform 0.2s ease;
+  /* position: absolute; */
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+}
+.btn-add-schedule:hover {
+  transform: scale(1.05);
+}
+
+/* 「新增自訂景點」：右側表單欄位 */
+.form-label {
+  font-weight: 600;
+}
+.custom-spot-input {
+  margin-bottom: 1rem;
+}
+
+/* 「貢獻影音」：拖曳區與右側設定 */
+.fake-dropzone {
+  background-color: #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #777;
+  min-height: 300px;
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.upload-hint {
+  font-size: 0.9rem;
+  color: #999;
+}
+
+/* 「要加在哪裡？」示意插圖 */
+.fake-illustration {
+  /* background-color: #f0f0f0; */
+  color: #777;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  text-align: center;
+  font-size: 1.2rem;
+  padding: 1rem;
+}
+.itinerary-option {
+  margin-top: 1rem;
+}
+
+/* 「要放在哪裡？」地圖區 */
+.taiwan-map {
+  background-color: #cce5ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+  font-size: 1.2rem;
+  color: #555;
+  padding: 1rem;
+  position: relative;
+}
+
+/* 膠囊形按鈕 */
+.btn-capsule {
+  border-radius: 50px;
+  padding: 0.75rem 1.5rem;
+}
+
+/* 小卡樣式 */
+.spot-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+.spot-card:hover {
+  background-color: #f9f9f9;
+}
+.spot-card input[type="checkbox"] {
+  margin-top: 4px;
+}
+.spot-card .spot-index {
+  font-weight: bold;
+  color: #999;
+}
+/* 新景點名稱預設灰色 */
+.new-spot-name {
+  color: #999;
+}
+/* 選到後變成橘色 */
+.new-spot-name.selected {
+  color: #ff9800;
+}
+
+/* 返回按鈕（左上角） */
+.btn-back {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: none;
+  border: none;
+  color: #fff; /* 或自訂顏色 */
+  font-size: 1.4rem;
+  cursor: pointer;
+  z-index: 2; /* 確保在地圖上層 */
+}
+.btn-back:hover {
+  opacity: 0.8;
+}
+
+.itinerary-title:hover {
+  color: #8b8b8b;
+}
+
+/* -----------------------------
+         響應式 RWD 調整
+         當螢幕寬度小於 992px（平板與手機）時，採用垂直堆疊 */
+@media (max-width: 991.98px) {
+  .modal-dialog.custom-size {
+    width: 95%;
+    max-width: 95%;
+    height: auto;
+    margin: 1rem auto;
+  }
+  .modal-content.custom-content {
+    flex-direction: column;
+    height: auto;
+  }
+  .modal-left,
+  .modal-right {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* 覆寫所有按鈕背景、邊框與文字顏色 */
+.btn {
+  background-color: #a47764 !important;
+  border-color: #a47764 !important;
+  color: #fff !important;
+}
+/* 如果有 hover 狀態，也一起設定 */
+.btn:hover {
+  background-color: #8b645a !important;
+  border-color: #8b645a !important;
+  /* opacity: 0.9; */
+  font-weight: bold;
+}
+/* === Modal 統一大小設定 === */
+.custom-modal-dialog {
+  width: 480px; /* 固定寬度 */
+  max-width: 480px; /* 避免被 Bootstrap 預設 max-width 覆蓋 */
+  /* margin: auto; */
+  /* 置中 */
+}
+.custom-fixed-size {
+  height: calc(100vh - 40px); /* 固定高度 */
+  display: flex; /* 讓 header/body/footer 垂直排列 */
+  flex-direction: column;
+  overflow: hidden; /* 由內部控制捲動 */
+}
+
+/* header 與 footer 固定高度 (由內容撐開)，中間 .modal-body 可捲動 */
+.modal-header,
+.modal-footer {
+  flex: 0 0 auto;
+}
+
+.modal-body {
+  flex: 1 1 auto; /* 彈性高度 */
+  overflow-y: auto; /* 超出時可捲動 */
+  overflow-x: hidden; /* 避免水平捲動 */
+}
+
+/* 以下保留你原本的樣式 (僅示範部分) */
+
+.trip-cover {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background-color: #eee;
+}
+.trip-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+.btn-change-cover {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  border: 2px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  border-radius: 9999px;
+  padding: 0.3rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+.btn-change-cover:hover {
+  opacity: 0.8;
+}
+
+/* (2) 分享行程Modal：QR碼置中 & 小螃蟹置右 */
+.share-modal-body {
+  position: relative;
+  text-align: center;
+  padding: 1rem;
+  background-color: #f3f4f8;
+  height: 100%;
+}
+.qr-code {
+  width: 150px;
+  height: 150px;
+  background-color: #eee;
+  margin: 0 auto 1rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* 讓 Tabs 的寬度平均分配 */
+.share-tabs .nav-link {
+  width: 50%;
+  text-align: center;
+  background-color: #e8ebf0;
+}
+
+/* 加了這行還是不行改tab沒有active的顏色 */
+.nav-link {
+  color: black;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  background-color: #a47764;
+  border-color: #a47764;
+  color: #fff;
+}
+
+.tab-pane {
+  background-color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+/* 中央 QR Code 區域 */
+.qr-code-wrapper {
+  width: 200px;
+  height: 200px;
+  background-color: #eee;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.qr-code-wrapper img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* 或 cover */
+  display: block;
+}
+
+/* 三顆大圖示按鈕容器 */
+.share-btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+/* 單一大圖示按鈕 (icon 上 / 文字下) */
+.share-btn {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: white; /* 可依需求調整 */
+  background-color: #a47764;
+  border-radius: 10px;
+}
+
+.share-btn:hover {
+  background-color: #8b645a;
+}
+
+.share-btn i {
+  font-size: 1.5rem;
+}
+
+.ctrl-title {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  position: relative;
+  font-size: 14px;
+  color: #2d405799;
+  width: 100%;
+}
+
+.ctrl-title::before {
+  content: "";
+  display: inline-block;
+  height: 1px;
+  width: calc(50% - 40px);
+  flex: 1 0 0;
+  background-color: #2d405733;
+}
+
+.ctrl-title::after {
+  content: "";
+  display: inline-block;
+  height: 1px;
+  width: calc(50% - 40px);
+  flex: 1 0 0;
+  background-color: #2d405733;
+}
+
+/* 邀請共編分頁上方的下拉 (小) */
+.invite-dropdown {
+  display: inline-block;
+  position: relative;
+}
+.invite-dropdown-toggle {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  border: 1px solid #ccc;
+  padding: 0.2rem 0.6rem;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  background-color: #f8f8f8;
+}
+.invite-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 100;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  min-width: 150px;
+  display: none; /* 預設隱藏 */
+}
+.invite-dropdown-menu.show {
+  display: block; /* 顯示 */
+}
+.invite-dropdown-menu li {
+  list-style: none;
+  padding: 0 32px 0 20px;
+  text-align: left;
+  cursor: pointer;
+  height: 34px;
+  line-height: 34px;
+}
+.invite-dropdown-menu li:hover {
+  background-color: #eee;
+}
+
+.btn-outline-primary {
+  width: 100%;
+  border-radius: 50px;
+}
+
+/* (3) 選擇要加入的清單Modal */
+.list-modal {
+  height: 450px;
+  max-height: calc(100% - 160px);
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.list-check {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 0.6rem 0.8rem;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+.list-check:hover {
+  background-color: #f9f9f9;
+}
+.list-check input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+.list-check .list-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.modal-footer {
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(45, 64, 87, 0.1);
+}
+
+.count-total {
+  color: #369bd9;
+  font-size: 24px;
+}
+
+/* (4) 新增清單Modal */
+/* 直接沿用原先表單風格 */
+
+/* ===== RWD 調整 ===== */
+/* 手機裝置 (小於 576px) */
+@media (max-width: 575.98px) {
+  .custom-modal-dialog {
+    width: 95%;
+    max-width: 95%;
+    margin: auto;
+  }
+}
+/* 平板裝置 (576px ~ 991.98px) */
+@media (min-width: 576px) and (max-width: 991.98px) {
+  .custom-modal-dialog {
+    width: 90%;
+    max-width: 480px;
+    margin: auto;
+  }
+}
