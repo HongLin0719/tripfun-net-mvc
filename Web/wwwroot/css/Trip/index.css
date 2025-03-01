@@ -1,0 +1,706 @@
+﻿.search input:focus {
+    outline: none;
+    /* 移除藍色外框 */
+    box-shadow: none;
+    /* 確保 Bootstrap 或其他樣式不影響 */
+    border-color: inherit;
+    /* 保持原本的邊框顏色 */
+}
+
+.left button {
+    background-color: #a47464;
+    border-color: #a47764;
+    position: relative;
+    /* 確保 z-index 有效 */
+    z-index: 5;
+    /* 設置一個較高的 z-index */
+}
+
+.search button:hover {
+    background-color: #8b645a;
+    border-color: #8b645a;
+    font-weight: bold;
+}
+
+.content button {
+    background-color: #a47464;
+    border-color: #a47764;
+    position: relative;
+    /* 確保 z-index 有效 */
+    z-index: 10;
+    /* 設置一個較高的 z-index */
+}
+
+    .content button:hover {
+        background-color: #8b645a;
+        border-color: #8b645a;
+        font-weight: bold;
+    }
+
+@media screen and (min-width: 1024px) {
+
+    /* 上方整個搜尋列+內容 */
+    /* .top {
+                position: relative;
+            } */
+    .navBar {
+        margin: 0px 60px;
+        padding: 40px 0px 40px;
+        position: relative;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+    }
+
+    /* 背景圖片 */
+    .bg-swapper img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    /* 左邊+右邊區塊 */
+    .left-right {
+        margin: 0px 62px 0px;
+    }
+
+    /* 最上方標題+搜尋列 */
+    .search .title {
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 44px;
+        margin-bottom: 24px;
+        color: white;
+    }
+
+    .search {
+        padding: 0px 0px 40px;
+    }
+
+    /* 左方區塊下方內容 */
+    .author {
+        margin: 0px 0px 16px;
+        align-items: center;
+    }
+
+    .content .name {
+        font-size: 20px;
+    }
+
+    .content .title {
+        margin: 0px 0px 8px;
+        font-size: 24px;
+        color: #FFFFFF;
+    }
+
+    .content .detail {
+        margin: 0px 0px 24px;
+        font-size: 14px;
+        overflow: hidden;
+    }
+
+    .content button {
+        padding: 8px 16px;
+        /* background-color: #FFF3; */
+        color: #FFF;
+    }
+
+    /* 右方區塊下面輪播卡 */
+    .carousel-control-prev {
+        justify-content: start;
+    }
+
+    .carousel-control-next {
+        justify-content: end;
+    }
+
+    .swapperCard img {
+        width: 100%;
+        height: auto;
+        border: 1px solid #FFFFFF;
+        display: block;
+        cursor: pointer;
+        /* 確保圖片不會受 inline 影響 */
+    }
+
+    /* 確保 swapperCard 內部內容不會重疊 */
+    .swapperCard {
+        /* height: 100%;
+            position: relative; */
+        /* 讓子元素（如 .card-text）可以正確對齊 */
+        display: flex;
+        flex-direction: column;
+        /*讓內部元素垂直排列 */
+        /* align-items: center; */
+        justify-content: flex-end;
+        /* 讓內容靠底部對齊 */
+    }
+
+    .swiper-wrapper {
+        /* display: flex; */
+        /* align-items: flex-end; 讓所有 .swapperCard 靠底部對齊 */
+        height: 100%;
+        /* 確保 swiper-wrapper 撐滿高度 */
+    }
+
+    /* 讓文字區塊不會被擠壓 */
+    .card-text {
+        text-align: center;
+        /* 讓文字置中 */
+        position: absolute;
+        left: auto;
+        padding: 10px;
+    }
+
+        .card-text p {
+            margin: 0;
+        }
+
+    /* ---------下半部------- */
+    .hito {
+        margin: 80px 80px 20px;
+    }
+
+    .hitoCard {
+        padding: 0px 10px 30px;
+    }
+
+        .hitoCard img,
+        .hitoCard .card-body {
+            cursor: pointer;
+        }
+
+    .container .hitoCard img {
+        width: 100%;
+        height: auto;
+    }
+
+    .hitoCard .userText {
+        color: #2d4057;
+        min-height: 40px;
+        padding: 8px 0px 0px;
+    }
+
+    .hitoCard p {
+        font-size: 12px;
+    }
+
+    .container .hitoCard .user {
+        width: 20px;
+        height: 20px;
+    }
+
+    .hitoCard .remark {
+        background-color: #2D40570D;
+        padding: 0px 6px;
+        color: #2D405799;
+        font-size: 12px;
+    }
+
+    article .hitoCard .thumb {
+        color: #2D405799;
+        font-size: 12px;
+    }
+
+    .img-container {
+        position: relative;
+        /* display: inline; */
+    }
+
+    .top-badge {
+        position: absolute;
+        background-color: #FAD200;
+        /* 金黃色 */
+        color: black;
+        font-weight: bold;
+        font-size: 14px;
+        padding: 6.5px 0px 7.5px;
+        border-radius: 6px 6px 100px 100px;
+        width: 40px;
+        height: 48px;
+        left: 16px;
+        top: -8px;
+        text-align: center;
+        font-weight: 700;
+    }
+
+    .top-badge2 {
+        position: absolute;
+        background-color: #FF9446;
+        color: black;
+        font-weight: bold;
+        font-size: 14px;
+        padding: 6.5px 0px 7.5px;
+        border-radius: 6px 6px 100px 100px;
+        width: 40px;
+        height: 48px;
+        left: 16px;
+        top: -8px;
+        text-align: center;
+        font-weight: 700;
+    }
+
+    .location-badge {
+        position: absolute;
+        bottom: 15px;
+        left: 10px;
+        color: white;
+        font-size: 14px;
+        font-weight: 800;
+        line-height: 24px;
+        padding: 0px 5px;
+        border-radius: 10px;
+    }
+}
+
+
+@media screen and (max-width: 767px) {
+
+    /* 上方標題+搜尋列 */
+    .search {
+        padding: 4px 20px 6px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+    }
+
+        .search .title {
+            white-space: nowrap;
+            color: white;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+        }
+
+        .search .input-group-text {
+            padding: 4px 12px 4px 4px;
+            /* flex-grow: 1;  讓輸入框能自適應延展 */
+        }
+
+        .search input {
+            width: 100%;
+            font-size: 12px;
+            line-height: 24px;
+            color: #2d4057;
+            border: none;
+        }
+
+        .search i {
+            width: 6px;
+        }
+
+    /* 使用者圖片+帳號 */
+    .content .author {
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 12px;
+        gap: 10px;
+    }
+
+    /* 主題+內文+按鈕 */
+    .content {
+        text-align: center;
+        justify-content: center;
+    }
+
+        .content .title {
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 36px;
+            margin-bottom: 6px;
+            text-shadow: 0px 4px 12px rgba(0, 0, 0, .2);
+            overflow: hidden;
+        }
+
+        .content .detail {
+            overflow: hidden;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 20px;
+            text-shadow: 0px 4px 12px rgba(0, 0, 0, .2);
+            margin-bottom: 20px;
+            padding: 0px 30px;
+        }
+
+        .content button {
+            padding: 8px 16px;
+            background-color: #FFF3;
+            font-size: 14px;
+        }
+
+    /* 背景圖片 */
+    .bg-swapper img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    .navBar {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    /* 輪播卡片 */
+    .swiper-wrapper {
+        display: flex;
+        justify-content: space-between;
+        /* 讓三個卡片均分排列 */
+        padding: 20px 16px;
+    }
+
+    .card-text {
+        font-size: 10px;
+        overflow: hidden;
+        white-space: nowrap;
+        position: absolute;
+        bottom: 0px;
+        /* 讓文字顯示在圖片的底部 */
+        left: 50%;
+        transform: translateX(-50%);
+        color: white;
+        text-align: center;
+    }
+
+    .swapperCard img {
+        width: 100%;
+        /* 確保圖片適應容器 */
+        height: auto;
+        border: 1px solid white;
+    }
+
+    .swapperCard {
+        display: flex;
+        flex: 1;
+        /* 讓每張卡片平均分配空間 */
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        /* 讓文字能夠絕對定位 */
+        text-align: center;
+    }
+
+    /* 人氣排行卡片 */
+    .hito-container {
+        padding: 0 20px 20px;
+    }
+
+    .hito {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 32px;
+        color: #2d4057;
+        margin: 8px 0;
+    }
+
+    .hitoCard {
+        padding: 16px 0 12px;
+        border-bottom: solid 1px rgba(45, 64, 87, .1);
+        cursor: pointer;
+    }
+
+    .img-container {
+        position: relative;
+    }
+
+    .top-badge {
+        position: absolute;
+        background-color: #FAD200;
+        /* 金黃色 */
+        color: black;
+        font-weight: bold;
+        font-size: 14px;
+        padding: 6.5px 0px 7.5px;
+        border-radius: 6px 6px 100px 100px;
+        width: 40px;
+        height: 48px;
+        left: 16px;
+        top: -8px;
+        text-align: center;
+        font-weight: 700;
+    }
+
+    .top-badge2 {
+        position: absolute;
+        background-color: #FF9446;
+        color: black;
+        font-weight: bold;
+        font-size: 14px;
+        padding: 6.5px 0px 7.5px;
+        border-radius: 6px 6px 100px 100px;
+        width: 40px;
+        height: 48px;
+        left: 16px;
+        top: -8px;
+        text-align: center;
+        font-weight: 700;
+    }
+
+    .location-badge {
+        position: absolute;
+        bottom: 15px;
+        left: 10px;
+        color: white;
+        font-size: 14px;
+        font-weight: 800;
+        line-height: 24px;
+        padding: 0px 5px;
+        border-radius: 10px;
+    }
+
+    .card-body h5 {
+        margin: 8px 0px;
+        color: #2D4057;
+        font-size: 16px;
+    }
+
+    .card-body p {
+        color: #2D4057;
+        font-size: 12px;
+    }
+
+    .card-body .remark {
+        font-size: 12px;
+        color: #2D405799;
+        background-color: #2D40570D;
+        padding: 0px 6px;
+    }
+
+    .card-body .thumb {
+        font-size: 12px;
+        color: #2D405799;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    /* 背景圖片 */
+    .bg-swapper img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        min-height: 100%;
+        object-fit: cover;
+        z-index: -1;
+    }
+
+    .top {
+        position: relative;
+        /* width: 100%;
+                height: auto; */
+        /* overflow: hidden; */
+    }
+
+    /* 標題+搜尋列 */
+    .search {
+        display: flex;
+        padding: 4px 24px 6px;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        gap: 8px;
+    }
+
+        .search .title {
+            font-weight: 500;
+            line-height: 24px;
+            width: fit-content;
+            flex-shrink: 0;
+        }
+
+    /* 推薦內容 */
+    .content {
+        padding: 120px 138px 24px;
+        text-align: center;
+    }
+
+        .content .author {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            line-height: 28px;
+            font-weight: 500;
+            overflow: hidden;
+            color: #FFF;
+        }
+
+        .content .title {
+            font-size: 28px;
+            line-height: 42px;
+            margin-bottom: 8px;
+            font-weight: 500;
+            overflow: hidden;
+            color: #FFF;
+        }
+
+        .content .detail {
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: 400;
+            color: #FFFC;
+            text-shadow: 0px 4px 12px rgba(0, 0, 0, .2);
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .content button {
+            background-color: #fff3;
+            color: #fff;
+            padding: 8px 16px;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 24px;
+            height: 40px;
+        }
+
+    /* 輪播卡片 */
+    .swiper-wrapper {
+        display: flex;
+        justify-content: space-between;
+        /* 讓三個卡片均分排列 */
+        padding: 24px;
+    }
+
+    .card-text {
+        font-size: 18px;
+        line-height: 28px;
+        overflow: hidden;
+        white-space: nowrap;
+        position: absolute;
+        bottom: 0px;
+        /* 讓文字顯示在圖片的底部 */
+        color: white;
+        text-align: center;
+    }
+
+    .swapperCard img {
+        width: 100%;
+        /* 確保圖片適應容器 */
+        height: auto;
+        border: 1px solid white;
+    }
+
+    .swapperCard {
+        display: flex;
+        flex: 1;
+        /* 讓每張卡片平均分配空間 */
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        /* 讓文字能夠絕對定位 */
+        text-align: center;
+    }
+
+    /* 排行卡片 */
+    .hito-container {
+        padding: 0px 24px 24px;
+    }
+
+    .hito {
+        color: #2D4057;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 32px;
+        margin: 40px 0px 20px;
+    }
+
+    .hitoCard {
+        padding: 0px 10px 20px;
+    }
+
+    .card-body h5 {
+        color: #2D4057;
+        font-size: 16px;
+        margin: 0px 0px 8px;
+        overflow: hidden;
+        font-weight: 500;
+        line-height: 24px;
+        min-height: 40px;
+    }
+
+    .card-body p {
+        color: #2D4057;
+        font-size: 12px;
+        overflow: hidden;
+        font-weight: 500;
+        line-height: 20px;
+    }
+
+    .card-body .remark {
+        color: #2d405799;
+        background-color: #2D40570D;
+        padding: 0px 6px;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 20px;
+        border-radius: 4px;
+    }
+
+    .card-body .thumb {
+        color: #2d405799;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 20px;
+    }
+
+    .img-container {
+        position: relative;
+    }
+
+    .top-badge {
+        position: absolute;
+        background-color: #FAD200;
+        /* 金黃色 */
+        color: black;
+        font-weight: bold;
+        font-size: 14px;
+        padding: 6.5px 0px 7.5px;
+        border-radius: 6px 6px 100px 100px;
+        width: 40px;
+        height: 48px;
+        left: 16px;
+        top: -8px;
+        text-align: center;
+        font-weight: 700;
+    }
+
+    .top-badge2 {
+        position: absolute;
+        background-color: #FF9446;
+        color: black;
+        font-weight: bold;
+        font-size: 14px;
+        padding: 6.5px 0px 7.5px;
+        border-radius: 6px 6px 100px 100px;
+        width: 40px;
+        height: 48px;
+        left: 16px;
+        top: -8px;
+        text-align: center;
+        font-weight: 700;
+    }
+
+    .location-badge {
+        position: absolute;
+        bottom: 15px;
+        left: 10px;
+        color: white;
+        font-size: 14px;
+        font-weight: 800;
+        line-height: 24px;
+        padding: 0px 5px;
+        border-radius: 10px;
+    }
+}
