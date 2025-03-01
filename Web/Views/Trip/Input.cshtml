@@ -1,0 +1,295 @@
+﻿
+@{
+    ViewData["Title"] = "Input";
+}
+
+
+@section TOPCSS {
+    <link rel="stylesheet" href="~/css/Trip/input.css">
+}
+
+<!-- 搜尋bar及結果顯示 -->
+<div class="searchBar d-flex p-3">
+    <div class="search input-group ms-2">
+        <span class="dropdown input-group-text border-1 rounded-pill">
+            <button class="searchButton btn btn-primary dropdown-toggle px-2 rounded-pill">找地區</button>
+            <i class="fa-solid fa-search ms-1"></i>
+            <input type="text" class="searchButton2 form-control border-0" placeholder="看看大家怎麼玩"
+                   aria-label="Username" aria-describedby="basic-addon1" />
+        </span>
+    </div>
+</div>
+<h2 id="selectedRegionDisplay" class="input"><strong></strong></h2>
+
+<!-- 精選行程 -->
+<article>
+    <div class="special">
+        <h5><strong>精選行程</strong></h5>
+        <p class="d-inline">看看旅遊專家們安排的路線與小撇步</p>
+        <div class="button-two d-inline" role="group" aria-label="First group">
+            <button type="button" class="btn btn-outline-secondary swiper-button-next">></button>
+            <button type="button" class="btn btn-outline-secondary swiper-button-prev">
+                <
+            </button>
+        </div>
+    </div>
+
+    <div>
+        <!-- 幻燈片區域 -->
+        <div class="specialPic swiper mySwiper">
+            <div class="allPic swiper-wrapper d-flex gap-2">
+                <div class="swiper-slide">
+                    <img class="rounded-5" src="https://picsum.photos/id/79/170/350" alt="">
+                    <p class=""><br></p>
+                </div>
+                <div class="swiper-slide">
+                    <img class="rounded-5" src="https://picsum.photos/id/82/170/350" alt="">
+                    <p class=""><br></p>
+                </div>
+                <div class="swiper-slide">
+                    <img class="rounded-5" src="https://picsum.photos/id/83/170/350" alt="">
+                    <p class=""><br></p>
+                </div>
+                <div class="swiper-slide">
+                    <img class="rounded-5" src="https://picsum.photos/id/78/170/350" alt="">
+                    <p class=""><br></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</article>
+
+<article class="hito-container">
+    <h2 class="title"><strong>行程攻略</strong></h2>
+
+    <!-- 時間及主題按鈕目前不做 -->
+    <!-- <button class="btn btn-outline-info dropdown-toggle rounded-pill px-2">時間</button>
+        <button class="btn btn-outline-info dropdown-toggle rounded-pill px-2">主題</button> -->
+    <!-- 卡片第一列 -->
+    <div class="container">
+        <div class="row">
+            <div class="hitoCard col-xl-3 col-md-6 border-0">
+                <div class="img-container">
+                    <img class="img-card rounded-3" src="https://picsum.photos/id/13/250/150"
+                         alt="">
+                    <span class="location-badge"><i class="fa-solid fa-location-dot mx-2"></i>日本</span>
+                </div>
+                <div class="card-body">
+                    <h5 class="userText fs-6 fw-bold">東京七天六夜攻略筆記：橫濱/河口湖/吉祥寺/迪士尼</h5>
+                    <img class="user rounded-pill avatar rounded-circle d-inline"
+                         src="https://picsum.photos/id/6/20/20" alt="使用者頭像">
+                    <p class="userText d-inline fw-bold">一直玩的馬摩</p>
+                    <div>
+                        <span class="remark">7日遊</span><span class="remark">秘境美拍</span>
+                        <span class="remark">觀光景點</span><span class="remark">+4</span>
+                    </div>
+                    <div class="thumb"><i class="fa-regular fa-thumbs-up"></i>1.6K・8.7K人都在用</div>
+                </div>
+            </div>
+            <div class="hitoCard col-xl-3 col-md-6 border-0">
+                <div class="img-container">
+                    <img class="rounded-3" src="https://picsum.photos/id/14/250/150" alt="">
+                    <span class="location-badge"><i class="fa-solid fa-location-dot mx-2"></i>日本</span>
+                </div>
+                <div class="card-body">
+                    <h5 class="userText fs-6 fw-bold">日本關西必遊路線：京都大阪奈良六天五夜</h5>
+                    <img class="user mx-auto rounded-pill avatar rounded-circle d-inline"
+                         src="https://picsum.photos/id/6/20/20" alt="使用者頭像">
+                    <p class="userText d-inline fw-bold">蓉蓉</p>
+                    <div>
+                        <span class="remark">6日遊</span><span class="remark">自由行</span>
+                        <span class="remark">觀光景點</span><span class="remark">+4</span>
+                    </div>
+                    <div class="thumb"><i class="fa-regular fa-thumbs-up"></i>1.6K・8.3K人都在用</div>
+                </div>
+            </div>
+            <div class="hitoCard col-xl-3 col-md-6 border-0">
+                <div class="img-container">
+                    <img class="rounded-3" src="https://picsum.photos/id/15/250/150" alt="">
+                    <span class="location-badge"><i class="fa-solid fa-location-dot mx-2"></i>台灣</span>
+                </div>
+                <div class="card-body">
+                    <h5 class="userText fs-6 fw-bold">到嘉義就是要吃！</h5>
+                    <img class="user mx-auto rounded-pill avatar rounded-circle d-inline"
+                         src="https://picsum.photos/id/6/20/20" alt="使用者頭像">
+                    <p class="userText d-inline fw-bold">壹加壹</p>
+                    <div>
+                        <span class="remark">2日遊</span><span class="remark">租車自駕</span>
+                        <span class="remark">吃吃喝喝</span><span class="remark"></span>
+                    </div>
+                    <div class="thumb"><i class="fa-regular fa-thumbs-up"></i>1.4K・3.3K人都在用</div>
+                </div>
+            </div>
+            <div class="hitoCard col-xl-3 col-md-6 border-0">
+                <div class="img-container">
+                    <img class="rounded-3" src="https://picsum.photos/id/16/250/150" alt="">
+                    <span class="location-badge"><i class="fa-solid fa-location-dot mx-2"></i>日本</span>
+                </div>
+                <div class="card-body">
+                    <h5 class="userText fs-6 fw-bold">【布萊N】🇯🇵京阪六天五夜行</h5>
+                    <img class="user mx-auto rounded-pill avatar rounded-circle d-inline"
+                         src="https://picsum.photos/id/6/20/20" alt="使用者頭像">
+                    <p class="userText d-inline fw-bold">布萊N機票達人</p>
+                    <div>
+                        <span class="remark">6日遊</span><span class="remark">自由行</span>
+                        <span class="remark">觀光景點</span><span class="remark">+3</span>
+                    </div>
+                    <div class="thumb"><i class="fa-regular fa-thumbs-up"></i>989・4.1K人都在用</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 卡片第二列 -->
+    <div class="container">
+        <div class="row">
+            <div class="hitoCard col-xl-3 col-md-6 border-0">
+                <div class="img-container">
+                    <img class="rounded-3" src="https://picsum.photos/id/13/250/150" alt="">
+                    <span class="location-badge"><i class="fa-solid fa-location-dot mx-2"></i>日本</span>
+                </div>
+                <div class="card-body">
+                    <h5 class="userText fs-6 fw-bold">東京七天六夜攻略筆記：橫濱/河口湖/吉祥寺/迪士尼</h5>
+                    <img class="user rounded-pill avatar rounded-circle d-inline"
+                         src="https://picsum.photos/id/6/20/20" alt="使用者頭像">
+                    <p class="userText d-inline fw-bold">一直玩的馬摩</p>
+                    <div>
+                        <span class="remark">7日遊</span><span class="remark">秘境美拍</span>
+                        <span class="remark">觀光景點</span><span class="remark">+4</span>
+                    </div>
+                    <div class="thumb"><i class="fa-regular fa-thumbs-up"></i>1.6K・8.7K人都在用</div>
+                </div>
+            </div>
+            <div class="hitoCard col-xl-3 col-md-6 border-0">
+                <div class="img-container">
+                    <img class="rounded-3" src="https://picsum.photos/id/14/250/150" alt="">
+                    <span class="location-badge"><i class="fa-solid fa-location-dot mx-2"></i>日本</span>
+                </div>
+                <div class="card-body">
+                    <h5 class="userText fs-6 fw-bold">日本關西必遊路線：京都大阪奈良六天五夜</h5>
+                    <img class="user mx-auto rounded-pill avatar rounded-circle d-inline"
+                         src="https://picsum.photos/id/6/20/20" alt="使用者頭像">
+                    <p class="userText d-inline fw-bold">蓉蓉</p>
+                    <div>
+                        <span class="remark">6日遊</span><span class="remark">自由行</span>
+                        <span class="remark">觀光景點</span><span class="remark">+4</span>
+                    </div>
+                    <div class="thumb"><i class="fa-regular fa-thumbs-up"></i>1.6K・8.3K人都在用</div>
+                </div>
+            </div>
+            <div class="hitoCard col-xl-3 col-md-6 border-0">
+                <div class="img-container">
+                    <img class="rounded-3" src="https://picsum.photos/id/15/250/150" alt="">
+                    <span class="location-badge"><i class="fa-solid fa-location-dot mx-2"></i>台灣</span>
+                </div>
+                <div class="card-body">
+                    <h5 class="userText fs-6 fw-bold">到嘉義就是要吃！</h5>
+                    <img class="user mx-auto rounded-pill avatar rounded-circle d-inline"
+                         src="https://picsum.photos/id/6/20/20" alt="使用者頭像">
+                    <p class="userText d-inline fw-bold">壹加壹</p>
+                    <div>
+                        <span class="remark">2日遊</span><span class="remark">租車自駕</span>
+                        <span class="remark">吃吃喝喝</span><span class="remark"></span>
+                    </div>
+                    <div class="thumb"><i class="fa-regular fa-thumbs-up"></i>1.4K・3.3K人都在用</div>
+                </div>
+            </div>
+            <div class="hitoCard col-xl-3 col-md-6 border-0">
+                <div class="img-container">
+                    <img class="rounded-3" src="https://picsum.photos/id/16/250/150" alt="">
+                    <span class="location-badge"><i class="fa-solid fa-location-dot mx-2"></i>日本</span>
+                </div>
+                <div class="card-body">
+                    <h5 class="userText fs-6 fw-bold">【布萊N】🇯🇵京阪六天五夜行</h5>
+                    <img class="user mx-auto rounded-pill avatar rounded-circle d-inline"
+                         src="https://picsum.photos/id/6/20/20" alt="使用者頭像">
+                    <p class="userText d-inline fw-bold">布萊N機票達人</p>
+                    <div>
+                        <span class="remark">6日遊</span><span class="remark">自由行</span>
+                        <span class="remark">觀光景點</span><span class="remark">+3</span>
+                    </div>
+                    <div class="thumb"><i class="fa-regular fa-thumbs-up"></i>989・4.1K人都在用</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 卡片第三列 -->
+    <div class="container">
+        <div class="row">
+            <div class="hitoCard col-xl-3 col-md-6 border-0">
+                <div class="img-container">
+                    <img class="rounded-3" src="https://picsum.photos/id/13/250/150" alt="">
+                    <span class="location-badge"><i class="fa-solid fa-location-dot mx-2"></i>日本</span>
+                </div>
+                <div class="card-body">
+                    <h5 class="userText fs-6 fw-bold">東京七天六夜攻略筆記：橫濱/河口湖/吉祥寺/迪士尼</h5>
+                    <img class="user rounded-pill avatar rounded-circle d-inline"
+                         src="https://picsum.photos/id/6/20/20" alt="使用者頭像">
+                    <p class="userText d-inline fw-bold">一直玩的馬摩</p>
+                    <div>
+                        <span class="remark">7日遊</span><span class="remark">秘境美拍</span>
+                        <span class="remark">觀光景點</span><span class="remark">+4</span>
+                    </div>
+                    <div class="thumb"><i class="fa-regular fa-thumbs-up"></i>1.6K・8.7K人都在用</div>
+                </div>
+            </div>
+            <div class="hitoCard col-xl-3 col-md-6 border-0">
+                <div class="img-container">
+                    <img class="rounded-3" src="https://picsum.photos/id/14/250/150" alt="">
+                    <span class="location-badge"><i class="fa-solid fa-location-dot mx-2"></i>日本</span>
+                </div>
+                <div class="card-body">
+                    <h5 class="userText fs-6 fw-bold">日本關西必遊路線：京都大阪奈良六天五夜</h5>
+                    <img class="user mx-auto rounded-pill avatar rounded-circle d-inline"
+                         src="https://picsum.photos/id/6/20/20" alt="使用者頭像">
+                    <p class="userText d-inline fw-bold">蓉蓉</p>
+                    <div>
+                        <span class="remark">6日遊</span><span class="remark">自由行</span>
+                        <span class="remark">觀光景點</span><span class="remark">+4</span>
+                    </div>
+                    <div class="thumb"><i class="fa-regular fa-thumbs-up"></i>1.6K・8.3K人都在用</div>
+                </div>
+            </div>
+            <div class="hitoCard col-xl-3 col-md-6 border-0">
+                <div class="img-container">
+                    <img class="rounded-3" src="https://picsum.photos/id/15/250/150" alt="">
+                    <span class="location-badge"><i class="fa-solid fa-location-dot mx-2"></i>台灣</span>
+                </div>
+                <div class="card-body">
+                    <h5 class="userText fs-6 fw-bold">到嘉義就是要吃！</h5>
+                    <img class="user mx-auto rounded-pill avatar rounded-circle d-inline"
+                         src="https://picsum.photos/id/6/20/20" alt="使用者頭像">
+                    <p class="userText d-inline fw-bold">壹加壹</p>
+                    <div>
+                        <span class="remark">2日遊</span><span class="remark">租車自駕</span>
+                        <span class="remark">吃吃喝喝</span><span class="remark"></span>
+                    </div>
+                    <div class="thumb"><i class="fa-regular fa-thumbs-up"></i>1.4K・3.3K人都在用</div>
+                </div>
+            </div>
+            <div class="hitoCard col-xl-3 col-md-6 border-0">
+                <div class="img-container">
+                    <img class="rounded-3" src="https://picsum.photos/id/16/250/150" alt="">
+                    <span class="location-badge"><i class="fa-solid fa-location-dot mx-2"></i>日本</span>
+                </div>
+                <div class="card-body">
+                    <h5 class="userText fs-6 fw-bold">【布萊N】🇯🇵京阪六天五夜行</h5>
+                    <img class="user mx-auto rounded-pill avatar rounded-circle d-inline"
+                         src="https://picsum.photos/id/6/20/20" alt="使用者頭像">
+                    <p class="userText d-inline fw-bold">布萊N機票達人</p>
+                    <div>
+                        <span class="remark">6日遊</span><span class="remark">自由行</span>
+                        <span class="remark">觀光景點</span><span class="remark">+3</span>
+                    </div>
+                    <div class="thumb"><i class="fa-regular fa-thumbs-up"></i>989・4.1K人都在用</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+@section ENDJS {
+    <script src="~/js/Trip/input.js"></script>
+}

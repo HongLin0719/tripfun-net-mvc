@@ -1,0 +1,100 @@
+﻿.dropdown input:focus {
+    outline: none;
+    /* 移除藍色外框 */
+    box-shadow: none;
+    /* 確保 Bootstrap 或其他樣式不影響 */
+}
+
+header .dropdown {
+    margin: 10px;
+}
+
+.allCard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 10px;
+    margin: auto;
+}
+
+.hot {
+    text-align: left;
+    margin: 30px;
+}
+
+/* 卡片區 */
+.cardBox .card-img-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0;
+    text-align: center;
+}
+
+.cardBox .circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid #a47464;
+    /* 圓圈邊框顏色 */
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.selected {
+    background-color: #8b645a !important;
+    /* 選取後的顏色 */
+    /* display: block; */
+    /* 顯示圓圈 */
+}
+
+.cardBox h5 {
+    font-size: 16px;
+}
+
+.card {
+    cursor: pointer;
+}
+
+
+#exploreButton {
+    background-color: #a47464;
+    border-color: #a47764;
+}
+
+    #exploreButton:hover {
+        background-color: #8b645a;
+        border-color: #8b645a;
+        font-weight: bold;
+    }
+
+/* 手機板裝置尺寸：768px 以下 */
+@media screen and (max-width: 767px) {
+
+    /* 手機板樣式 */
+    .allCard {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        gap: 10px;
+        margin: auto;
+    }
+}
+
+/* 平板裝置尺寸：768px ~ 1024px 之間 */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    /* 平板裝置樣式 */
+    /* body {
+                width: 768px;
+            } */
+}
+
+/* 電腦版裝置尺寸：1024px 以上 */
+@media screen and (min-width: 1024px) {
+    /* 電腦版樣式 */
+    /* body {
+                width: 1366px;
+            } */
+}

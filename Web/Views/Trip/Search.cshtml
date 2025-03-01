@@ -1,0 +1,69 @@
+﻿
+@{
+    ViewData["Title"] = "Search";
+}
+
+@section TOPCSS {
+    <link rel="stylesheet" href="~/css/Trip/search.css">
+}
+
+<header>
+    <span class="dropdown input-group-text bg-white border-0">
+        <i class="fa-solid fa-search mx-1 ms-3"></i>
+        <input id="selectedRegions" type="text" class="form-control border-1 rounded-pill"
+               placeholder="輸入國家 / 城市 / 地區" aria-label="Username" aria-describedby="basic-addon1" />
+        <button type="button" class="btn-close mx-3" data-bs-dismiss="modal" aria-label="Close"></button>
+    </span>
+
+    <hr class="my-4 border-secondary">
+
+    <h5 class="hot fw-bold">熱門目的地</h5>
+    <div class="cardBox allCard container">
+        <!-- 卡片1 -->
+        <div class="card text-white col-12" onclick="toggleSelection(this, '北部')">
+            <div class="position-relative">
+                <img src="https://picsum.photos/id/32/400/200/" class="card-img" alt="北部">
+                <div class="circle"></div>
+            </div>
+            <div class="card-img-overlay">
+                <h5 class="fw-bold">北部</h5>
+            </div>
+        </div>
+        <div class="card text-white col-12" onclick="toggleSelection(this, '中部')">
+            <div class="position-relative">
+                <img src="https://picsum.photos/id/33/400/200/" class="card-img" alt="中部">
+                <div class="circle"></div>
+            </div>
+            <div class="card-img-overlay">
+                <h5 class="fw-bold">中部</h5>
+            </div>
+        </div>
+        <div class="card text-white col-12" onclick="toggleSelection(this, '南部')">
+            <div class="position-relative">
+                <img src="https://picsum.photos/id/35/400/200/" class="card-img" alt="南部">
+                <div class="circle"></div>
+            </div>
+            <div class="card-img-overlay">
+                <h5 class="fw-bold">南部</h5>
+            </div>
+        </div>
+        <div class="card text-white col-12" onclick="toggleSelection(this, '東部')">
+            <div class="position-relative">
+                <img src="https://picsum.photos/id/38/400/200/" class="card-img" alt="東部">
+                <div class="circle"></div>
+            </div>
+            <div class="card-img-overlay">
+                <h5 class="fw-bold">東部</h5>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-grid my-5 mx-3">
+        <hr class="my-4 border-secondary">
+        <button id="exploreButton" class="btn btn-primary fw-bold fs-5 rounded-5" type="button">前往探索</button>
+    </div>
+</header>
+
+@section ENDJS {
+    <script src="~/js/Trip/search.js"></script>
+}
