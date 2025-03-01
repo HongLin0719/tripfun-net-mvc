@@ -1,0 +1,341 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<div id="cartIndex">
+    @* @await Html.PartialAsync("_ProductHeaderPartial") *@
+    <div id="app" class="container">
+      <!-- 3 step 標題 (簡易麵包屑或流程指示) -->
+      <nav aria-label="breadcrumb ">
+        <ol class="breadcrumb mt-4">
+          <li
+            class="breadcrumb-item"
+            :class="{'step-active': currentStep === 1}"
+          >
+            購物車
+          </li>
+          <el-icon class="icon"><arrow-right /></el-icon>
+          <li
+            class="breadcrumb-item"
+            :class="{'step-active': currentStep === 2}"
+          >
+            填寫資料與付款
+          </li>
+          <el-icon class="icon"><arrow-right /></el-icon>
+          <li
+            class="breadcrumb-item"
+            :class="{'step-active': currentStep === 3}"
+          >
+            訂購完成
+          </li>
+        </ol>
+      </nav>
+
+      
+      <!-- Step 1：購物車 (含勾選框) -->
+      <div v-if="currentStep === 1">
+        <!-- 購物車提示 Q: 是否規定此欄位? -->
+      <div class="alert alert-info">購物車 | 訂單僅能結帳同類型產品</div>
+
+        <h6 class="mt-3"><strong>旅遊商品</strong></h6>
+        <div class="d-flex justify-content-between align-items-center">
+          <label style="cursor: pointer">
+            <el-checkbox
+              class="me-2"
+              v-model="selectAll"
+            />
+            <span>全選 （{{ selectedItems.length }}）</span>
+          </label>
+          <button class="btn custom-btn mb-2" @@click="deleteSelected">
+            刪除已選取項目
+          </button>
+        </div>
+
+        <!-- 卡片使用js套入資料 -->
+        <!-- 以 row + flex-column 先定義手機版堆疊樣式；大尺寸(lg)以上改為flex-row -->
+        <div
+          class="card col-12 row g-2 align-items-center flex-column flex-lg-row border-0"
+          v-for="(item, index) in cartItems"
+          :key="index"
+        >
+          <!-- A. 左側+中間資訊，手機版時在同一個col -->
+          <div class="col-12 col-lg-10 d-flex align-items-center">
+            <!-- A-1 左側：Checkbox + 圖片 -->
+            <div class="col-4 col-lg-3 d-flex align-items-center">
+              <el-checkbox v-model="item.checked" :id="'itemCheck' + index" class="me-4">
+                
+              </el-checkbox>
+              <img
+                :src="item.img"
+                class="img-fluid rounded"
+                alt="商品圖片"
+                style="max-height: 100px; object-fit: cover"
+              />
+            </div>
+            <!-- A-2 中間：資訊文字 -->
+            <div class="col-8 col-lg-9">
+              <div class="card-body d-flex flex-column flex-lg-row">
+                <div class="col-12 col-lg-8 me-4">
+                  <h4 class="card-title">{{ item.title }}</h4>
+                  <p class="card-subtitle">{{item.detail}}</p>
+                </div>
+                <div class="col-12 col-lg-4 row flex-column flex-lg-row">
+                  <p class="card-text mb-1 col-lg-6">{{ item.date }}</p>
+                  <p class="card-text mb-1 col-lg-6">{{ item.people }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- B. 右側：價格與移除按鈕 -->
+          <div
+            class="col-12 col-lg-2 d-flex align-items-center justify-content-between"
+          >
+            <h5 class="fw-bold ms-5" style="color: var(--bs-primary)">
+              TWD {{ item.price }}
+            </h5>
+            <button class="btn" @@click="removeItem(index)">
+              <el-icon><delete-filled /></el-icon>
+            </button>
+          </div>
+
+          <div class="bottom-reminder"></div>
+        </div>
+
+        <div class="d-flex align-items-center justify-content-between">
+          <div><h5>猜你喜歡</h5></div>
+          <button class="btn custom-btn me-2" @@click="addRandomItem"
+          >
+            加入購物車 (範例)
+          </button>
+        </div>
+        <div class="bottom-reminder"></div>
+
+        <!-- 顯示勾選商品的總金額 / 下一步 -->
+        <div class="d-flex justify-content-between mt-2 mb-5">
+          <div style="color: var(--bs-primary)">
+            <p>
+              <el-icon><info-filled /></el-icon>
+              價格會因匯率而浮動，確切價格以結帳金額為主。
+            </p>
+            <p>
+              <el-icon><info-filled /></el-icon>
+              因地區時差和價格因素影響，憑證發放時間導致延遲。
+            </p>
+          </div>
+          <div>
+            <b>已勾選金額：</b>
+            <strong style="color: var(--bs-primary)">TWD {{ selectedTotalPrice }}</strong>
+            <button
+              class="btn custom-btn ms-3"
+              @@click="goToStep(2)"
+              :disabled="selectedItems.length === 0"
+            >
+              下一步
+            </button>
+          </div>
+        </div>
+        
+      </div>
+
+      <!-- Step 2：填寫資料與付款 (只顯示勾選的商品) -->
+      <div v-else-if="currentStep === 2">
+        <h4 class="my-3">已下單商品</h4>
+
+        <!-- 已勾選商品清單 -->
+        <div class="card mb-3" v-for="(item, idx) in selectedItems" :key="idx">
+          <div class="row g-0 align-items-center">
+            <div class="col-md-2">
+              <img
+                :src="item.img"
+                class="img-fluid rounded ms-3"
+                alt="商品圖片"
+                style="max-height: 80px; object-fit: cover"
+              />
+            </div>
+            <div class="col-md-7">
+              <div class="card-body">
+                <h6 class="card-title">{{ item.title }}</h6>
+                <p class="card-text mb-1">日期：{{ item.date }}</p>
+                <p class="card-text mb-1">人數：{{ item.people }}</p>
+              </div>
+            </div>
+            <div class="col-md-3 d-flex justify-content-end p-3">
+              <span class="text-danger fw-bold">TWD {{ item.price }}</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="mb-3 text-end">
+          <strong>合計金額：TWD {{ selectedTotalPrice }}</strong>
+        </div>
+
+        <!-- 填寫顧客資料 -->
+        <div class="accordion" id="mainAccordion">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTraveler">
+              <button
+                class="accordion-button"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTraveler"
+                aria-expanded="true"
+                aria-controls="collapseTraveler"
+              >
+                填寫旅客資料
+              </button>
+            </h2>
+            <!-- 將 collapse 設為 collapse show(預設打開) -->
+            <div
+              id="collapseTraveler"
+              class="accordion-collapse collapse show"
+              aria-labelledby="headingTraveler"
+              data-bs-parent="#mainAccordion"
+            >
+              <div class="accordion-body">
+                <!-- 使用 @@submit.prevent 讓 Vue 接手表單驗證 -->
+                <form class="row g-3" novalidate @@submit.prevent="checkForm">
+                  <!-- 姓名 -->
+                  <div class="col-md-4">
+                    <label for="first-name" class="form-label"
+                      >姓名 <span class="text-danger">*</span></label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="first-name"
+                      placeholder="例：品睿"
+                      v-model="firstName"
+                      @@blur="fieldTouched.firstName = true"
+                      :class="{
+                        'is-invalid': fieldTouched.firstName && !firstName
+                      }"
+                      required
+                    />
+                    <div class="invalid-feedback">必填</div>
+                  </div>
+                  <!-- 姓氏 -->
+                  <div class="col-md-4">
+                    <label for="last-name" class="form-label"
+                      >姓氏 <span class="text-danger">*</span></label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="last-name"
+                      placeholder="例：盧"
+                      v-model="lastName"
+                      @@blur="fieldTouched.lastName = true"
+                      :class="{
+                        'is-invalid': fieldTouched.lastName && !lastName
+                      }"
+                      required
+                    />
+                    <div class="invalid-feedback">必填</div>
+                  </div>
+                  <!-- 聯絡電話 -->
+                  <div class="col-md-4">
+                    <label for="phone" class="form-label"
+                      >聯絡電話 <span class="text-danger">*</span></label
+                    >
+                    <input
+                      type="tel"
+                      class="form-control"
+                      id="phone"
+                      placeholder="請輸入聯絡電話"
+                      v-model="phone"
+                      @@blur="fieldTouched.phone = true"
+                      :class="{
+                        'is-invalid': fieldTouched.phone && !phone
+                      }"
+                      required
+                    />
+                    <div class="invalid-feedback">必填</div>
+                  </div>
+                  <!-- 國家/地區 -->
+                  <div class="col-md-4">
+                    <label for="country" class="form-label"
+                      >國家/地區 <span class="text-danger">*</span></label
+                    >
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="country"
+                      placeholder="台灣"
+                      v-model="country"
+                      @@blur="fieldTouched.country = true"
+                      :class="{
+                        'is-invalid': fieldTouched.country && !country
+                      }"
+                      required
+                    />
+                    <div class="invalid-feedback">必填</div>
+                  </div>
+                  <!-- 電子信箱 -->
+                  <div class="col-md-8">
+                    <label for="email" class="form-label"
+                      >電子信箱 <span class="text-danger">*</span></label
+                    >
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="email"
+                      placeholder="請輸入常用電子信箱"
+                      v-model="email"
+                      @@blur="fieldTouched.email = true"
+                      :class="{
+                        'is-invalid': fieldTouched.email && !validEmail
+                      }"
+                      required
+                    />
+                    <div class="invalid-feedback">必填或格式錯誤</div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 提交表單 -->
+        <div class="d-flex justify-content-between align-items-center mt-3">
+          <button class="btn custom-btn" @@click="goToStep(1)">
+            上一步
+          </button>
+          <!-- 提交按鈕 -->
+          <button class="btn custom-btn" @@click="goToStep(3)">確認付款</button>
+        </div>
+      </div>
+
+      <!-- Step 3：訂購完成 -->
+      <div v-else-if="currentStep === 3">
+        <h4 class="my-3">訂購完成</h4>
+        <div class="alert alert-info" role="alert">
+          感謝您的訂購！您的訂單編號為：
+          <strong>{{ orderNumber }}</strong>
+        </div>
+        <p>
+          您共勾選了 {{ selectedItems.length }} 項商品，金額合計 TWD {{
+          selectedTotalPrice }}。
+        </p>
+        <p>已將訂單資訊寄送至您的電子郵件：{{email }}</p>
+        <p>若有任何疑問，請聯絡客服中心。</p>
+        <div class="d-flex justify-content-end align-items-center">
+          <button class="btn custom-btn" @@click="finishOrder">返回首頁</button>
+        </div>
+            
+      </div>
+        @* @await Html.PartialAsync("_ProductFooterPartial") *@
+    </div>
+</div>
+
+
+@section TOPCSS {
+    <link rel="stylesheet" href="~/css/Product/cart.css">
+    @* <link rel="stylesheet" href="~/css/Product/styles.css" /> *@
+
+}
+
+@section ENDJS {
+    <script src="~/js/Product/cart.js"></script>
+
+}
