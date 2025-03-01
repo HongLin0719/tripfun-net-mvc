@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\css\Product\" />
     <Folder Include="wwwroot\image\index\" />
     <Folder Include="wwwroot\js\index\" />
   </ItemGroup>
