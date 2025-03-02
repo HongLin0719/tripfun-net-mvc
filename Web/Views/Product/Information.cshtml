@@ -1,6 +1,6 @@
 ﻿@section TOPCSS {
 	<!-- Swiper CSS -->
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
 	<link rel="stylesheet" href="~/css/Product/Information.css" />
 }
 <!-- 顶部蓝色条 -->
@@ -8,427 +8,425 @@
 
 <!-- 主导航栏 -->
 <nav class="navbar navbar-expand-lg navbar-light">
-    <div class="container-fluid">
-        <!-- 左侧 Logo -->
-        <a class="navbar-brand" href="#">
-            <img src="./IMG/logo.jpg" alt="去趣" />
+	<div class="container-fluid">
+		<!-- 左侧 Logo -->
+		<a class="navbar-brand" href="#">
+			<img src="./IMG/logo.jpg" alt="去趣" />
 
-        </a>
+		</a>
 
-        <!-- 居中搜索框 -->
-        <form class="search-bar mx-auto">
-            <i class="bi bi-search search-icon"></i>
-            <input class="form-control"
-                   type="search"
-                   placeholder="輸入目的地、景點、體驗行程或活動名稱..."
-                   aria-label="Search" />
-        </form>
+		<!-- 居中搜索框 -->
+		<form class="search-bar mx-auto">
+			<i class="bi bi-search search-icon"></i>
+			<input class="form-control"
+				   type="search"
+				   placeholder="輸入目的地、景點、體驗行程或活動名稱..."
+				   aria-label="Search" />
+		</form>
 
-        <!-- 右侧功能 -->
-        <div class="nav-right">
-            <span>旅遊規劃必備APP</span>
-            <span>登入/註冊</span>
+		<!-- 右侧功能 -->
+		<div class="nav-right">
+			<span>旅遊規劃必備APP</span>
+			<span>登入/註冊</span>
 
-        </div>
-    </div>
+		</div>
+	</div>
 </nav>
 
 <!-- 可滑動導航欄 -->
 <div class="scrollable-nav">
-    <!-- 左箭頭 -->
-    <button class="scroll-btn scroll-left" onclick="scrollNav(-200)">&#10094;</button>
+	<!-- 左箭頭 -->
+	<button class="scroll-btn scroll-left" onclick="scrollNav(-200)">&#10094;</button>
 
-    <!-- 可滾動內容 -->
-    <div class="nav-content" id="navScroll">
-        <a href="#" class="nav-item">美食甜點</a>
-        <a href="#" class="nav-item">景點門票</a>
-        <a href="#" class="nav-item">溫泉泡湯</a>
-        <a href="#" class="nav-item">博物館 / 美術館</a>
-        <a href="#" class="nav-item">工作坊 & 課程</a>
-        <a href="#" class="nav-item">活動 & 展覽</a>
-        <a href="#" class="nav-item">主題樂園</a>
-        <a href="#" class="nav-item">spa & 按摩</a>
-        <a href="#" class="nav-item">住宿</a>
-        <a href="#" class="nav-item">觀光行程</a>
-        <a href="#" class="nav-item">戶外活動</a>
-    </div>
+	<!-- 可滾動內容 -->
+	<div class="nav-content" id="navScroll">
+		<a href="#" class="nav-item">美食甜點</a>
+		<a href="#" class="nav-item">景點門票</a>
+		<a href="#" class="nav-item">溫泉泡湯</a>
+		<a href="#" class="nav-item">博物館 / 美術館</a>
+		<a href="#" class="nav-item">工作坊 & 課程</a>
+		<a href="#" class="nav-item">活動 & 展覽</a>
+		<a href="#" class="nav-item">主題樂園</a>
+		<a href="#" class="nav-item">spa & 按摩</a>
+		<a href="#" class="nav-item">住宿</a>
+		<a href="#" class="nav-item">觀光行程</a>
+		<a href="#" class="nav-item">戶外活動</a>
+	</div>
 
-    <!-- 右箭頭 -->
-    <button class="scroll-btn scroll-right" onclick="scrollNav(200)">&#10095;</button>
+	<!-- 右箭頭 -->
+	<button class="scroll-btn scroll-right" onclick="scrollNav(200)">&#10095;</button>
 </div>
 
 
 <div class="container-md">
-    <div class="breadcrumb-container">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item">首頁</li>
-                <li class="breadcrumb-item">日本 群馬</li>
-                <li class="breadcrumb-item active .col-sm-" aria-current="page">
-                    日本群馬 | 伊香保玩具 & 人偶及汽車博物館 | 電子門票
-                </li>
-            </ol>
-        </nav>
-    </div>
+	<div class="breadcrumb-container">
+		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item">首頁</li>
+				<li class="breadcrumb-item">日本 群馬</li>
+				<li class="breadcrumb-item active .col-sm-" aria-current="page">
+					日本群馬 | 伊香保玩具 & 人偶及汽車博物館 | 電子門票
+				</li>
+			</ol>
+		</nav>
+	</div>
 </div>
 <div class="container-md">
-    <!-- 7張圖片的輪播圖 -->
-    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+	<!-- 7張圖片的輪播圖 -->
+	<div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
 
-        <!-- 小圓點指示器（已修正置中） -->
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"></button>
-            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1"></button>
-            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2"></button>
-            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="3"></button>
-            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="4"></button>
-            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="5"></button>
-            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="6"></button>
-        </div>
+		<!-- 小圓點指示器（已修正置中） -->
+		<div class="carousel-indicators">
+			<button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"></button>
+			<button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1"></button>
+			<button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2"></button>
+			<button type="button" data-bs-target="#carouselExample" data-bs-slide-to="3"></button>
+			<button type="button" data-bs-target="#carouselExample" data-bs-slide-to="4"></button>
+			<button type="button" data-bs-target="#carouselExample" data-bs-slide-to="5"></button>
+			<button type="button" data-bs-target="#carouselExample" data-bs-slide-to="6"></button>
+		</div>
 
-        <!-- 輪播圖片內容 -->
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="https://picsum.photos/1200/500?random=1" class="d-block w-100" alt="圖片1">
-            </div>
-            <div class="carousel-item">
-                <img src="https://picsum.photos/1200/500?random=2" class="d-block w-100" alt="圖片2">
-            </div>
-            <div class="carousel-item">
-                <img src="https://picsum.photos/1200/500?random=1" class="d-block w-100" alt="圖片3">
-            </div>
-            <div class="carousel-item">
-                <img src="https://picsum.photos/1200/500?random=4" class="d-block w-100" alt="圖片4">
-            </div>
-            <div class="carousel-item">
-                <img src="https://picsum.photos/1200/500?random=5" class="d-block w-100" alt="圖片5">
-            </div>
-            <div class="carousel-item">
-                <img src="https://picsum.photos/1200/500?random=6" class="d-block w-100" alt="圖片6">
-            </div>
-            <div class="carousel-item">
-                <img src="https://picsum.photos/1200/500?random=7" class="d-block w-100" alt="圖片7">
-            </div>
-        </div>
+		<!-- 輪播圖片內容 -->
+		<div class="carousel-inner">
+			<div class="carousel-item active">
+				<img src="https://picsum.photos/1200/500?random=1" class="d-block w-100" alt="圖片1">
+			</div>
+			<div class="carousel-item">
+				<img src="https://picsum.photos/1200/500?random=2" class="d-block w-100" alt="圖片2">
+			</div>
+			<div class="carousel-item">
+				<img src="https://picsum.photos/1200/500?random=1" class="d-block w-100" alt="圖片3">
+			</div>
+			<div class="carousel-item">
+				<img src="https://picsum.photos/1200/500?random=4" class="d-block w-100" alt="圖片4">
+			</div>
+			<div class="carousel-item">
+				<img src="https://picsum.photos/1200/500?random=5" class="d-block w-100" alt="圖片5">
+			</div>
+			<div class="carousel-item">
+				<img src="https://picsum.photos/1200/500?random=6" class="d-block w-100" alt="圖片6">
+			</div>
+			<div class="carousel-item">
+				<img src="https://picsum.photos/1200/500?random=7" class="d-block w-100" alt="圖片7">
+			</div>
+		</div>
 
-        <!-- 左右切換按鈕 -->
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-            <span class="custom-arrow">&lt;</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-            <span class="custom-arrow">&gt;</span>
-        </button>
-    </div>
+		<!-- 左右切換按鈕 -->
+		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+			<span class="custom-arrow">&lt;</span>
+		</button>
+		<button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+			<span class="custom-arrow">&gt;</span>
+		</button>
+	</div>
 
 
 </div>
 
 <div class="container mt-4">
-    <div class="row">
-        <!-- 左側資訊 -->
-        <div class="col-md-8">
-            <h2 class="ticket-title">日本京都 | 京都竹之鄉溫泉 萬葉之湯門票 | 即買即用</h2>
+	<div class="row">
+		<!-- 左側資訊 -->
+		<div class="col-md-8">
+			<h2 class="ticket-title">日本京都 | 京都竹之鄉溫泉 萬葉之湯門票 | 即買即用</h2>
 
-            <p class="location">
-                <img src="https://img.icons8.com/ios-filled/20/000000/marker.png" alt="地點"> 日本 京都
-            </p>
+			<p class="location">
+				<img src="https://img.icons8.com/ios-filled/20/000000/marker.png" alt="地點"> 日本 京都
+			</p>
 
-            <ol class="ticket-info">
-                <li>從竹之鄉湧出的單純溫泉和鈉碳酸氫鹽泉 2 種源泉，讓肌膚光滑水嫩，被奉為京都屈指可數的名湯。從竹之鄉湧出的單純溫泉和鈉碳酸氫鹽泉 2 種源泉，讓肌膚光滑水嫩，被奉為京都屈指可數的名湯。從竹之鄉湧出的單純溫泉和鈉碳酸氫鹽泉 2 種源泉，讓肌膚光滑水嫩，被奉為京都屈指可數的名湯。</li>
-                <li>餐廳提供從輕食、甜點到正餐等豐富的餐點，讓您大飽口福。餐廳提供從輕食、甜點到正餐等豐富的餐點，讓您大飽口福。餐廳提供從輕食、甜點到正餐等豐富的餐點，讓您大飽口福。</li>
-                <li>除溫泉外，還有休閒設施、漫畫、料理、遊戲中心等，讓您放鬆一天。除溫泉外，還有休閒設施、漫畫、料理、遊戲中心等，讓您放鬆一天。除溫泉外，還有休閒設施、漫畫、料理、遊戲中心等，讓您放鬆一天。</li>
-                <li>提供館內不限次數更換乾淨浴衣，種類豐富，歡迎自由選擇。提供館內不限次數更換乾淨浴衣，種類豐富，歡迎自由選擇。提供館內不限次數更換乾淨浴衣，種類豐富，歡迎自由選擇。</li>
-            </ol>
-        </div>
-
-
-        <!-- 右側價格區塊 -->
-
-        <div class="col-md-4">
-            <div class="price-card bg-white">
-                <p class="price">TWD 525 <small>起</small></p>
-                <button class="btn btn-primary">選擇方案</button>
-                <p class="discount-text">
-                    <img src="https://img.icons8.com/ios-filled/20/ff0000/discount.png" alt="折扣">可使用和泰Points折抵
-                </p>
-            </div>
-            <button class="btn btn-outline-secondary btn-lg d-block w-100 mt-2">更多資訊</button>
-        </div>
-
-        <!-- <div class="col-md-4">
-            <button class="btn btn-primary btn-lg d-block w-100">選擇方案</button>
-            <button class="btn btn-outline-secondary btn-lg d-block w-100 mt-2">更多資訊</button>
-        </div> -->
+			<ol class="ticket-info">
+				<li>從竹之鄉湧出的單純溫泉和鈉碳酸氫鹽泉 2 種源泉，讓肌膚光滑水嫩，被奉為京都屈指可數的名湯。從竹之鄉湧出的單純溫泉和鈉碳酸氫鹽泉 2 種源泉，讓肌膚光滑水嫩，被奉為京都屈指可數的名湯。從竹之鄉湧出的單純溫泉和鈉碳酸氫鹽泉 2 種源泉，讓肌膚光滑水嫩，被奉為京都屈指可數的名湯。</li>
+				<li>餐廳提供從輕食、甜點到正餐等豐富的餐點，讓您大飽口福。餐廳提供從輕食、甜點到正餐等豐富的餐點，讓您大飽口福。餐廳提供從輕食、甜點到正餐等豐富的餐點，讓您大飽口福。</li>
+				<li>除溫泉外，還有休閒設施、漫畫、料理、遊戲中心等，讓您放鬆一天。除溫泉外，還有休閒設施、漫畫、料理、遊戲中心等，讓您放鬆一天。除溫泉外，還有休閒設施、漫畫、料理、遊戲中心等，讓您放鬆一天。</li>
+				<li>提供館內不限次數更換乾淨浴衣，種類豐富，歡迎自由選擇。提供館內不限次數更換乾淨浴衣，種類豐富，歡迎自由選擇。提供館內不限次數更換乾淨浴衣，種類豐富，歡迎自由選擇。</li>
+			</ol>
+		</div>
 
 
+		<!-- 右側價格區塊 -->
+
+		<div class="col-md-4">
+			<div class="price-card bg-white">
+				<p class="price">TWD 525 <small>起</small></p>
+				<button class="btn btn-primary">選擇方案</button>
+				<p class="discount-text">
+					<img src="https://img.icons8.com/ios-filled/20/ff0000/discount.png" alt="折扣">可使用和泰Points折抵
+				</p>
+			</div>
+			<button class="btn btn-outline-secondary btn-lg d-block w-100 mt-2">更多資訊</button>
+		</div>
+
+		<!-- <div class="col-md-4">
+			<button class="btn btn-primary btn-lg d-block w-100">選擇方案</button>
+			<button class="btn btn-outline-secondary btn-lg d-block w-100 mt-2">更多資訊</button>
+		</div> -->
 
 
 
-    </div>
+
+
+	</div>
 </div>
 <div class="container mt-4">
-    <h4 class="fw-bold">選擇方案</h4>
+	<h4 class="fw-bold">選擇方案</h4>
 
-    <div class="options-section">
-        <!-- 第一張票券 -->
-        <div class="ticket-card">
-            <div class="ticket-info">
-                <p class="ticket-title">【組合套票】門票 + 深夜附加費</p>
-                <span class="instant-use">即買即用</span>
-                <p class="ticket-note">請注意：<br>**商品需額外收費部分</p>
-            </div>
-            <div class="ticket-price">
-                <p class="price">TWD 910</p>
-                <button class="btn btn-outline-primary btn-select" type="button" data-bs-toggle="collapse" data-bs-target="#detail1">
-                    選擇方案
-                </button>
-            </div>
-        </div>
+	<div class="options-section">
+		<!-- 第一張票券 -->
+		<div class="ticket-card">
+			<div class="ticket-info">
+				<p class="ticket-title">【組合套票】門票 + 深夜附加費</p>
+				<span class="instant-use">即買即用</span>
+				<p class="ticket-note">請注意：<br>**商品需額外收費部分</p>
+			</div>
+			<div class="ticket-price">
+				<p class="price">TWD 910</p>
+				<button class="btn btn-outline-primary btn-select" type="button" data-bs-toggle="collapse" data-bs-target="#detail1">
+					選擇方案
+				</button>
+			</div>
+		</div>
 
 
-        <!-- 詳細資訊與數量選擇 -->
-        <div class="collapse mb-2 row" id="detail1">
-            <!-- 日曆 -->
-            <div class="container col-12 col-md-6">
-                <div class="calendar-container">
-                    <div class="calendar-header">
-                        <span onclick="changeMonth(-1)">&#8592;</span>
-                        <h4 class="monthYear" class="text-center m-0"></h4>
-                        <span onclick="changeMonth(1)">&#8594;</span>
-                    </div>
-                    <table class="table calendar-table">
-                        <thead>
-                            <tr>
-                                <th>日</th>
-                                <th>一</th>
-                                <th>二</th>
-                                <th>三</th>
-                                <th>四</th>
-                                <th>五</th>
-                                <th>六</th>
-                            </tr>
-                        </thead>
-                        <tbody class="calendarBody"></tbody>
-                    </table>
-                </div>
-            </div>
+		<!-- 詳細資訊與數量選擇 -->
+		<div class="collapse mb-2 row" id="detail1">
+			<!-- 日曆 -->
+			<div class="container col-12 col-md-6">
+				<div class="calendar-container">
+					<div class="calendar-header">
+						<span onclick="changeMonth(-1)">&#8592;</span>
+						<h4 class="monthYear text-center m-0"></h4>
+						<span onclick="changeMonth(1)">&#8594;</span>
+					</div>
+					<table class="table calendar-table">
+						<thead>
+							<tr>
+								<th>日</th>
+								<th>一</th>
+								<th>二</th>
+								<th>三</th>
+								<th>四</th>
+								<th>五</th>
+								<th>六</th>
+							</tr>
+						</thead>
+						<tbody class="calendarBody"></tbody>
+					</table>
+				</div>
+			</div>
 
-            <div class="card card-body pb-4 my-4 col-12 col-md-6">
-                <table class="table">
-                    <tr>
-                        <th>關於此方案</th>
-                        <td>📩 立即確認  📜 立即發送憑證</td>
-                    </tr>
-                    <tr>
-                        <th>方案限制</th>
-                        <td>需要按照預訂日期及當天開放時間內兌換，逾期失效</td>
-                    </tr>
-                    <tr>
-                        <th>憑證使用期限</th>
-                        <td>需要按照預訂日期及當天開放時間內使用，逾期失效</td>
-                    </tr>
-                    <tr>
-                        <th>取消政策</th>
-                        <td>商品一經訂購完成後，即不可取消、更改訂單，亦不得請求退款</td>
-                    </tr>
-                </table>
+			<div class="card card-body pb-4 my-4 col-12 col-md-6">
+				<table class="table">
+					<tr>
+						<th>關於此方案</th>
+						<td>📩 立即確認  📜 立即發送憑證</td>
+					</tr>
+					<tr>
+						<th>方案限制</th>
+						<td>需要按照預訂日期及當天開放時間內兌換，逾期失效</td>
+					</tr>
+					<tr>
+						<th>憑證使用期限</th>
+						<td>需要按照預訂日期及當天開放時間內使用，逾期失效</td>
+					</tr>
+					<tr>
+						<th>取消政策</th>
+						<td>商品一經訂購完成後，即不可取消、更改訂單，亦不得請求退款</td>
+					</tr>
+				</table>
 
-                <!-- 數量選擇 -->
-                <h4 class="mt-3">請選擇數量</h4>
-                <div class="d-flex justify-content-between align-items-center">
-                    <div>
-                        <p>成人（國中生以上）</p>
-                        <div class="quantity-box">
-                            <button onclick="updateQuantity('adult', -1)">−</button>
-                            <span id="adult-quantity">0</span>
-                            <button onclick="updateQuantity('adult', 1)">+</button>
-                        </div>
-                    </div>
-                    <p class="price">TWD 910</p>
-                </div>
+				<!-- 數量選擇 -->
+				<h4 class="mt-3">請選擇數量</h4>
+				<div class="d-flex justify-content-between align-items-center">
+					<div>
+						<p>成人（國中生以上）</p>
+						<div class="quantity-box">
+							<button onclick="updateQuantity('adult', -1)">−</button>
+							<span id="adult-quantity">0</span>
+							<button onclick="updateQuantity('adult', 1)">+</button>
+						</div>
+					</div>
+					<p class="price">TWD 910</p>
+				</div>
 
-                <div class="d-flex justify-content-between align-items-center">
-                    <div>
-                        <p>兒童（小學生）</p>
-                        <div class="quantity-box">
-                            <button onclick="updateQuantity('child', -1)">−</button>
-                            <span id="child-quantity">0</span>
-                            <button onclick="updateQuantity('child', 1)">+</button>
-                        </div>
-                    </div>
-                    <p class="price">TWD 458</p>
-                </div>
+				<div class="d-flex justify-content-between align-items-center">
+					<div>
+						<p>兒童（小學生）</p>
+						<div class="quantity-box">
+							<button onclick="updateQuantity('child', -1)">−</button>
+							<span id="child-quantity">0</span>
+							<button onclick="updateQuantity('child', 1)">+</button>
+						</div>
+					</div>
+					<p class="price">TWD 458</p>
+				</div>
 
-                <div class="d-flex justify-content-between align-items-center">
-                    <div>
-                        <p>幼童（未就學孩童）</p>
-                        <div class="quantity-box">
-                            <button onclick="updateQuantity('infant', -1)">−</button>
-                            <span id="infant-quantity">0</span>
-                            <button onclick="updateQuantity('infant', 1)">+</button>
-                        </div>
-                    </div>
-                    <p class="price">TWD 404</p>
-                </div>
+				<div class="d-flex justify-content-between align-items-center">
+					<div>
+						<p>幼童（未就學孩童）</p>
+						<div class="quantity-box">
+							<button onclick="updateQuantity('infant', -1)">−</button>
+							<span id="infant-quantity">0</span>
+							<button onclick="updateQuantity('infant', 1)">+</button>
+						</div>
+					</div>
+					<p class="price">TWD 404</p>
+				</div>
 
-                <!-- 總金額 -->
-                <h3 class="mt-3">總金額: <span id="total-price">TWD 910</span></h3>
+				<!-- 總金額 -->
+				<h3 class="mt-3">總金額: <span id="total-price">TWD 910</span></h3>
 
-                <!-- 加入購物車 -->
-                <button class="cart-button">加入購物車</button>
-            </div>
-        </div>
-    </div>
+				<!-- 加入購物車 -->
+				<button class="cart-button">加入購物車</button>
+			</div>
+		</div>
+	</div>
 </div>
 
-    </div>
-</div>
 
 
 <div class="container mt-4">
-    <div class="row">
-        <!-- 左側內容 -->
-        <div class="col-md-9 content">
-            <h2 class="section-header">活動介紹</h2>
-            <p class="text-danger fw-bold">
-                此商品文案由機器翻譯提供，相關用語可能與慣用語法、原文內容有所差異，請知悉。
-            </p>
+	<div class="row">
+		<!-- 左側內容 -->
+		<div class="col-md-9 content">
+			<h2 class="section-header">活動介紹</h2>
+			<p class="text-danger fw-bold">
+				此商品文案由機器翻譯提供，相關用語可能與慣用語法、原文內容有所差異，請知悉。
+			</p>
 
-            <p class="description">
-                您可以期待什麼?~
-            </p>
-            <p class="description">
-                布達佩斯被譽為“溫泉之城”，擁有超過 118 個天然溫泉，而蓋勒特水療中心則是這座城市恢復活力皇冠上的一顆明珠。
-                這個標誌性的水療中心將健康、奢華和歷史融為一體，提供無與倫比的體驗。客人可以享受 13 個富含礦物質的不同溫度的溫泉池、桑拿浴室、蒸汽浴室、
-                冷水和熱水淋浴，以及室外造浪池，所有這些都配有令人驚嘆的羅馬風格建築。
-            </p>
-            <p class="description fade-text" id="extra-content">
-                為了提升體驗，套餐還包括免費參觀帕林卡博物館，客人可以在那裡品嚐匈牙利的招牌水果白蘭地——帕林卡。
-                這種文化增添了獨特的觸感，將放鬆與匈牙利傳統的正宗風味融為一體。
-            </p>
+			<p class="description">
+				您可以期待什麼?~
+			</p>
+			<p class="description">
+				布達佩斯被譽為“溫泉之城”，擁有超過 118 個天然溫泉，而蓋勒特水療中心則是這座城市恢復活力皇冠上的一顆明珠。
+				這個標誌性的水療中心將健康、奢華和歷史融為一體，提供無與倫比的體驗。客人可以享受 13 個富含礦物質的不同溫度的溫泉池、桑拿浴室、蒸汽浴室、
+				冷水和熱水淋浴，以及室外造浪池，所有這些都配有令人驚嘆的羅馬風格建築。
+			</p>
+			<p class="description fade-text" id="extra-content">
+				為了提升體驗，套餐還包括免費參觀帕林卡博物館，客人可以在那裡品嚐匈牙利的招牌水果白蘭地——帕林卡。
+				這種文化增添了獨特的觸感，將放鬆與匈牙利傳統的正宗風味融為一體。
+			</p>
 
-            <div class="more-info" id="toggle-button" onclick="toggleContent()">查看完整活動介紹</div>
-        </div>
+			<div class="more-info" id="toggle-button" onclick="toggleContent()">查看完整活動介紹</div>
+		</div>
 
-        <!-- 右側選單 -->
-        <div class="col-md-3 sidebar-menu">
-            <a href="#" class="active-btn">活動介紹</a>
-            <a href="#">注意事項</a>
-            <a href="#">更多消息</a>
-        </div>
-    </div>
+		<!-- 右側選單 -->
+		<div class="col-md-3 sidebar-menu">
+			<a href="#" class="active-btn">活動介紹</a>
+			<a href="#">注意事項</a>
+			<a href="#">更多消息</a>
+		</div>
+	</div>
 </div>
 
 <div class="container mt-4">
-    <div class="row">
-        <div class="col-md-12">
-            <!-- 主標題區塊 -->
-            <h2 class="notice-header">注意事項</h2>
-            <div class="notice-content">
-                <!-- 注意事項內容 -->
-                <h4>注意事項</h4>
-                <p>
-                    部分溫泉池將關閉以進行定期維護，游泳池內必須戴泳帽，其他泳池則不需要。
-                    供應商將向預訂時提供的電子郵件地址發送一封包含實際二維碼的後續電子郵件，
-                    但預訂將自動確認必須穿著泳衣和夾腳拖。
-                </p>
+	<div class="row">
+		<div class="col-md-12">
+			<!-- 主標題區塊 -->
+			<h2 class="notice-header">注意事項</h2>
+			<div class="notice-content">
+				<!-- 注意事項內容 -->
+				<h4>注意事項</h4>
+				<p>
+					部分溫泉池將關閉以進行定期維護，游泳池內必須戴泳帽，其他泳池則不需要。
+					供應商將向預訂時提供的電子郵件地址發送一封包含實際二維碼的後續電子郵件，
+					但預訂將自動確認必須穿著泳衣和夾腳拖。
+				</p>
 
-                <!-- 使用方式 -->
-                <h4>使用方式</h4>
-                <p>現場請出示電子憑證</p>
+				<!-- 使用方式 -->
+				<h4>使用方式</h4>
+				<p>現場請出示電子憑證</p>
 
-                <!-- 使用期限 -->
-                <h4>使用期限</h4>
-                <p>需要按照預訂日期及當天開放時間內使用，逾期失效</p>
+				<!-- 使用期限 -->
+				<h4>使用期限</h4>
+				<p>需要按照預訂日期及當天開放時間內使用，逾期失效</p>
 
-                <!-- 取消政策 -->
-                <h4>取消政策</h4>
-                <p>手續費收取方式：商品一經訂購完成後，即不可取消、更改訂單，亦不得請求退款。</p>
-            </div>
-        </div>
-    </div>
+				<!-- 取消政策 -->
+				<h4>取消政策</h4>
+				<p>手續費收取方式：商品一經訂購完成後，即不可取消、更改訂單，亦不得請求退款。</p>
+			</div>
+		</div>
+	</div>
 </div>
 
 
 <div class="container mt-4">
-    <div class="row">
-        <div class="col-md-12">
-            <!-- 主標題區塊 -->
-            <h2 class="info-header">更多消息</h2>
-            <div class="info-content">
-                <!-- 體驗地點 -->
-                <h4>體驗地點</h4>
-                <p>蓋勒特溫泉</p>
+	<div class="row">
+		<div class="col-md-12">
+			<!-- 主標題區塊 -->
+			<h2 class="info-header">更多消息</h2>
+			<div class="info-content">
+				<!-- 體驗地點 -->
+				<h4>體驗地點</h4>
+				<p>蓋勒特溫泉</p>
 
-                <!-- 費用明細 -->
-                <h4>— 費用明細 —</h4>
-                <p>費用包含/不包含</p>
-                <div class="row">
-                    <div class="col-md-6">
-                        <ul class="info-list">
-                            <li><i class="fa-solid fa-check check-icon"></i> 進入蓋勒特水療中心</li>
-                            <li><i class="fa-solid fa-check check-icon"></i> 私人小屋或置物櫃</li>
-                            <li><i class="fa-solid fa-check check-icon"></i> 帕林卡烈酒體驗，含 1 次品嚐（僅限帕林卡博物館）</li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6">
-                        <ul class="info-list">
-                            <li><i class="bi bi-x-lg cross-icon"></i> 個人消費</li>
-                            <li><i class="bi bi-x-lg cross-icon"></i> 以上未提及消費</li>
-                            <li><i class="bi bi-x-lg cross-icon"></i> 毛巾</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+				<!-- 費用明細 -->
+				<h4>— 費用明細 —</h4>
+				<p>費用包含/不包含</p>
+				<div class="row">
+					<div class="col-md-6">
+						<ul class="info-list">
+							<li><i class="fa-solid fa-check check-icon"></i> 進入蓋勒特水療中心</li>
+							<li><i class="fa-solid fa-check check-icon"></i> 私人小屋或置物櫃</li>
+							<li><i class="fa-solid fa-check check-icon"></i> 帕林卡烈酒體驗，含 1 次品嚐（僅限帕林卡博物館）</li>
+						</ul>
+					</div>
+					<div class="col-md-6">
+						<ul class="info-list">
+							<li><i class="bi bi-x-lg cross-icon"></i> 個人消費</li>
+							<li><i class="bi bi-x-lg cross-icon"></i> 以上未提及消費</li>
+							<li><i class="bi bi-x-lg cross-icon"></i> 毛巾</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
 <!-- 頁腳區塊 -->
 <footer class="footer">
-    <div class="container">
-        <div class="row">
-            <!-- 第一欄：關於和泰相關 -->
-            <div class="col-md-4">
-                <h5>關於和泰相關</h5>
-                <ul>
-                    <li><a href="#">和泰Points介紹</a></li>
-                    <li><a href="#">和泰集團會員</a></li>
-                    <li><a href="#">和泰集團會員隱私權政策</a></li>
-                    <li><a href="#">和泰集團常見問題</a></li>
-                    <li><a href="#">和泰集團會員條款</a></li>
-                </ul>
-            </div>
-            <!-- 第二欄：關於去趣 -->
-            <div class="col-md-4">
-                <h5>關於去趣</h5>
-                <ul>
-                    <li><a href="#">FAQ專區</a></li>
-                    <li><a href="#">客服專區</a></li>
-                    <li><a href="#">隱私權政策</a></li>
-                    <li><a href="#">免責聲明</a></li>
-                    <li><a href="#">防詐騙提醒</a></li>
-                    <li><a href="#">和泰集團相關服務</a></li>
-                </ul>
-            </div>
-            <!-- 第三欄：公司資訊 -->
-            <div class="col-md-4">
-                <h5>和漾旅行社股份有限公司</h5>
-                <p>旅遊商品由 和漾旅行社股份有限公司 提供</p>
-                <p>代表人：吳品璁 | 統一編號：90356017 | 旅行社註冊編號：850800 | 品保協會會員編號：北2598號</p>
-                <p>請點擊 <a href="#">客服專區</a> 專人為您服務</p>
-                <p>聯絡電話：(02)2506-2121 分機1436 週一至週五 (09:00-17:30) | 旅遊聯絡信箱：service@chictrip.com.tw</p>
-                <p>統一編號：55384114 | 地址：104台北市中山區松江路433號4樓 | 聯絡信箱：gocs@hotaigo.com.tw</p>
-            </div>
-        </div>
-        <!-- 頁腳底部 -->
-        <div class="footer-bottom">
-            Copyright © 2025 Hotai Connected Co., Ltd Powered by Hotai Motor Corporation
-        </div>
-    </div>
+	<div class="container">
+		<div class="row">
+			<!-- 第一欄：關於和泰相關 -->
+			<div class="col-md-4">
+				<h5>關於和泰相關</h5>
+				<ul>
+					<li><a href="#">和泰Points介紹</a></li>
+					<li><a href="#">和泰集團會員</a></li>
+					<li><a href="#">和泰集團會員隱私權政策</a></li>
+					<li><a href="#">和泰集團常見問題</a></li>
+					<li><a href="#">和泰集團會員條款</a></li>
+				</ul>
+			</div>
+			<!-- 第二欄：關於去趣 -->
+			<div class="col-md-4">
+				<h5>關於去趣</h5>
+				<ul>
+					<li><a href="#">FAQ專區</a></li>
+					<li><a href="#">客服專區</a></li>
+					<li><a href="#">隱私權政策</a></li>
+					<li><a href="#">免責聲明</a></li>
+					<li><a href="#">防詐騙提醒</a></li>
+					<li><a href="#">和泰集團相關服務</a></li>
+				</ul>
+			</div>
+			<!-- 第三欄：公司資訊 -->
+			<div class="col-md-4">
+				<h5>和漾旅行社股份有限公司</h5>
+				<p>旅遊商品由 和漾旅行社股份有限公司 提供</p>
+				<p>代表人：吳品璁 | 統一編號：90356017 | 旅行社註冊編號：850800 | 品保協會會員編號：北2598號</p>
+				<p>請點擊 <a href="#">客服專區</a> 專人為您服務</p>
+				<p>聯絡電話：(02)2506-2121 分機1436 週一至週五 (09:00-17:30) | 旅遊聯絡信箱：service@chictrip.com.tw</p>
+				<p>統一編號：55384114 | 地址：104台北市中山區松江路433號4樓 | 聯絡信箱：gocs@hotaigo.com.tw</p>
+			</div>
+		</div>
+		<!-- 頁腳底部 -->
+		<div class="footer-bottom">
+			Copyright © 2025 Hotai Connected Co., Ltd Powered by Hotai Motor Corporation
+		</div>
+	</div>
+</footer>
+@section ENDJS {
+	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+	<script src="~/js/Product/Information.js"></script>
 
-    @section ENDJS {
-        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-        <script src="~/js/Product/Information.js"></script>
-
-    }
+}
