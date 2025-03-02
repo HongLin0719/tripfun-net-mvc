@@ -1,4 +1,4 @@
-const { createApp } = Vue;
+
 const { ElIcon } = ElementPlus;
 const { Search, ShoppingCart, User, Location } = ElementPlusIconsVue;
 
@@ -24,49 +24,49 @@ createApp({
         {
           id: 1,
           name: "美食甜點",
-          image: "/image/mobile-categories/birthday-cake.png",
+          image: "/images/mobile-categories/birthday-cake.png",
         },
         {
           id: 2,
           name: "景點門票",
-            image: "/image/mobile-categories/ticket.png",
+            image: "/images/mobile-categories/ticket.png",
         },
         {
           id: 3,
           name: "溫泉泡湯",
-            image: "/image/mobile-categories/stones.png",
+            image: "/images/mobile-categories/stones.png",
         },
         {
           id: 4,
           name: "博物/美術館",
-            image: "/image/mobile-categories/painting.png",
+            image: "/images/mobile-categories/painting.png",
         },
         {
           id: 5,
           name: "工作坊＆課程",
-            image: "/image/mobile-categories/school-bag.png",
+            image: "/images/mobile-categories/school-bag.png",
         },
         {
           id: 6,
           name: "活動 & 展覽",
-            image: "/image/mobile-categories/museum-map.png",
+            image: "/images/mobile-categories/museum-map.png",
         },
         {
           id: 7,
           name: "主題樂園",
-            image: "/image/mobile-categories/merry-go-round.png",
+            image: "/images/mobile-categories/merry-go-round.png",
         },
         {
           id: 8,
           name: "spa & 按摩",
-            image: "/image/mobile-categories/bath-towel.png",
+            image: "/images/mobile-categories/bath-towel.png",
         },
       ],
       japanProducts: [
         {
           id: 1,
           name: "東京｜花之舞海鮮居酒屋｜江戶東京博物館前店",
-              image: "/image/products/japan/1.jpeg",
+              image: "/images/products/japan/1.jpeg",
           price: 451,
           originalPrice: 1610,
           description:
@@ -77,7 +77,7 @@ createApp({
         {
           id: 2,
           name: "東京｜新鮮漁獲直送居酒屋｜花之舞",
-            image: "/image/products/japan/2.jpeg",
+            image: "/images/products/japan/2.jpeg",
           price: 451,
           originalPrice: 1610,
           description:
@@ -88,7 +88,7 @@ createApp({
         {
           id: 3,
           name: "東京｜職人手作海鮮饗宴｜花之舞居酒屋",
-            image: "/image/products/japan/3.jpeg",
+            image: "/images/products/japan/3.jpeg",
           price: 451,
           originalPrice: 1610,
           description:
@@ -99,7 +99,7 @@ createApp({
         {
           id: 4,
           name: "東京｜道地日式海鮮料理｜花之舞本店",
-            image: "/image/products/japan/4.jpeg",
+            image: "/images/products/japan/4.jpeg",
           price: 451,
           originalPrice: 1610,
           description:
@@ -110,7 +110,7 @@ createApp({
         {
           id: 5,
           name: "東京｜道地日式海鮮料理｜花之舞本店",
-            image: "/image/products/japan/4.jpeg",
+            image: "/images/products/japan/4.jpeg",
           price: 451,
           originalPrice: 1610,
           description:
@@ -121,7 +121,7 @@ createApp({
         {
           id: 6,
           name: "東京｜道地日式海鮮料理｜花之舞本店",
-            image: "/image/products/japan/4.jpeg",
+            image: "/images/products/japan/4.jpeg",
           price: 451,
           originalPrice: 1610,
           description:
@@ -134,37 +134,37 @@ createApp({
         {
           id: 1,
           name: "曼谷奔集希爾頓逸林酒店的 OPEN 酒吧 |泰國",
-              image: "/image/hot-trip/1.webp",
+              image: "/images/hot-trip/1.webp",
           link: "#",
         },
         {
           id: 2,
           name: "曼谷皇家蘭花喜來登大酒店暹羅遊艇俱樂部餐廳晚餐套餐| 曼谷泰國",
-            image: "/image/hot-trip/2.webp",
+            image: "/images/hot-trip/2.webp",
           link: "#",
         },
         {
           id: 3,
           name: "曼谷 CentralWorld 的 Camin Cuisine & Cafe 供應泰國南部美食 |泰國",
-            image: "/image/hot-trip/3.webp",
+            image: "/images/hot-trip/3.webp",
           link: "#",
         },
         {
           id: 4,
           name: "爐邊酒吧及酒廊@聖淘沙灣|新加坡",
-            image: "/image/hot-trip/4.webp",
+            image: "/images/hot-trip/4.webp",
           link: "#",
         },
         {
           id: 5,
           name: "沖繩美食｜琉球料理 料亭那霸",
-            image: "/image/hot-trip/5.webp",
+            image: "/images/hot-trip/5.webp",
           link: "#",
         },
         {
           id: 6,
           name: "沖繩美食｜琉球料理 料亭那霸",
-            image: "/image/hot-trip/6.webp",
+            image: "/images/hot-trip/6.webp",
           link: "#",
         },
       ],
@@ -188,7 +188,7 @@ createApp({
         { name: "japan", ext: "png" },
       ];
       return banners.map(
-        (item) => `/image/banner/${this.bannerFolder}/${item.name}.${item.ext}`
+        (item) => `/images/banner/${this.bannerFolder}/${item.name}.${item.ext}`
       );
     },
     carouselHeight() {
