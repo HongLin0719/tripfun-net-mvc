@@ -1,4 +1,9 @@
-﻿<!-- 顶部蓝色条 -->
+﻿@section TOPCSS {
+	<!-- Swiper CSS -->
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+	<link rel="stylesheet" href="~/css/Product/Information.css" />
+}
+<!-- 顶部蓝色条 -->
 <div class="top-bar"></div>
 
 <!-- 主导航栏 -->
@@ -421,3 +426,9 @@
             Copyright © 2025 Hotai Connected Co., Ltd Powered by Hotai Motor Corporation
         </div>
     </div>
+
+    @section ENDJS {
+        <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+        <script src="~/js/Product/Information.js"></script>
+
+    }

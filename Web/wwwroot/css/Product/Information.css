@@ -1,0 +1,689 @@
+﻿/* 頂部顏色 */
+.top-bar {
+    background-color: #a47764;
+    height: 8px;
+}
+
+.navbar {
+    background-color: white;
+    padding: 12px 20px;
+    border-bottom: 1px solid #ddd;
+}
+/* Logo */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+}
+
+    .navbar-brand img {
+        height: 50px;
+        margin-right: 20px;
+    }
+/* 搜索 */
+.search-bar {
+    width: 40%;
+    position: relative;
+}
+
+    .search-bar input {
+        width: 100%;
+        padding: 8px 15px;
+        border-radius: 20px;
+        border: 1px solid #ccc;
+        padding-left: 35px;
+    }
+
+.search-icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    color: gray;
+}
+/* 整個導航區塊 */
+.scrollable-nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: #a47764;
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* 內部可滾動內容 */
+.nav-content {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none; /* 隱藏滾動條 (Firefox) */
+    -ms-overflow-style: none; /* 隱藏滾動條 (IE/Edge) */
+}
+
+    /* 隱藏 Chrome/Edge/Safari 的滾動條 */
+    .nav-content::-webkit-scrollbar {
+        display: none;
+    }
+
+/* 導航按鈕 */
+.nav-item {
+    flex: 0 0 auto;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #333;
+    text-decoration: none;
+}
+
+/* 按鈕樣式 */
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #a47764;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+}
+
+/* 左右箭頭 */
+.scroll-left {
+    left: 5px;
+}
+
+.scroll-right {
+    right: 5px;
+}
+
+/* 讓輪播圖高度適配 */
+.carousel-inner {
+    max-height: 500px;
+}
+
+    /* 讓圖片自適應，不變形 */
+    .carousel-inner img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 10px; /* 圓角圖片 */
+    }
+
+/* 設定小圓點（確保它們完全置中） */
+.carousel-indicators {
+    bottom: 20px;
+}
+
+    .carousel-indicators button {
+        width: 10px !important;
+        height: 10px !important;
+        border-radius: 50% !important;
+        background-color: rgba(255, 255, 255, 0.5) !important;
+        border: none !important;
+        display: inline-block !important;
+        margin: 0 5px !important;
+    }
+
+    .carousel-indicators .active {
+        background-color: white !important;
+    }
+
+/* 自訂左右箭頭按鈕 */
+.carousel-control-prev, .carousel-control-next {
+    width: 50px;
+    height: 50px;
+    background-color: #a47764;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* 隱藏 Bootstrap 預設黑色箭頭 */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    display: none;
+}
+
+/* 自訂箭頭樣式 */
+.custom-arrow {
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    /* width: 15px;
+            height: 15px;
+            border-left: 5px solid #00AEEF; /* 蓝色箭头线条 */
+    /* border-bottom: 5px solid #00AEEF; */
+}
+
+/* 讓標題更突出 */
+.ticket-title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* 小圖示和地點資訊 */
+.location {
+    font-size: 16px;
+    color: #555;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* 票券資訊 */
+.ticket-info {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.8;
+}
+
+/* 右側價格卡片 */
+.price-card {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+    .price small {
+        font-size: 14px;
+        color: #777;
+    }
+
+/* 按鈕設計 */
+.btn-primary {
+    color: black;
+    background-color: #a47764;
+    border: none;
+    font-size: 16px;
+    padding: 10px;
+    width: 90%;
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+    .btn-primary:hover {
+        background-color: #8b645a !important; /* 滑鼠懸停時變深藍 */
+        color: black !important; /* 文字變白 */
+        border-color: black !important; /* 邊框變深藍 */
+    }
+
+.discount-text {
+    font-size: 14px;
+    color: #555;
+    display: flex;
+    text-align: left;
+    gap: 15px;
+    margin-top: 5px;
+}
+
+
+/* 整個區塊的背景 */
+.options-section {
+    background-color: #a47764;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.card-body {
+    padding-bottom: 24px; /* 或者 16px/32px 依照需求調整 */
+}
+
+
+/* 票券卡片樣式 */
+.ticket-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/* 左側票券資訊 */
+.ticket-info {
+    max-width: 95%;
+}
+
+.ticket-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.ticket-note {
+    font-size: 14px;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* 「即買即用」標籤 */
+.instant-use {
+    background-color: #ffcc00;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+/* 右側價格資訊 */
+.ticket-price {
+    text-align: right;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+
+
+/* 選擇方案按鈕 */
+.btn-outline-primary {
+    color: black !important; /* 改變文字顏色 */
+    border-color: black !important; /* 改變邊框顏色 */
+
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.btn-select:hover {
+    background-color: #8b645a; /* 滑鼠懸停時改成深藍色 */
+    color: black; /* 文字顏色變白 */
+    border-color: black; /* 邊框變成深藍色 */
+}
+
+/*新按鈕的設計 */
+.btn-outline-secondary {
+    background-color: #a47764;
+    color: black;
+    border-radius: 10px; /* 圓角按鈕 */
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2); /* 陰影 */
+    border: none;
+    font-size: 16px;
+    padding: 10px;
+    width: 90%;
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+    .btn-outline-secondary:hover {
+        background-color: #8b645a;
+        color: black;
+        border-color: black;
+    }
+
+
+
+/* 數量選擇區塊 */
+.quantity-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+}
+
+    .quantity-box button {
+        width: 30px;
+        height: 30px;
+        border: 1px solid #ddd;
+        background-color: #a47764;
+        border-radius: 50%;
+        font-size: 18px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+        .quantity-box button:hover {
+            background-color: #8b645a;
+        }
+
+/* 加入購物車按鈕 */
+.cart-button {
+    background-color: #a47764;
+    color: white;
+    border: none;
+    font-size: 18px;
+    padding: 12px;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.section-header {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    border-left: 5px solid #ffcc00;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.8;
+}
+
+.fade-text {
+    color: #bbb;
+    display: none;
+}
+
+.more-info {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #8b645a;
+    cursor: pointer;
+}
+
+/* 容器和箭头样式 */
+.calendar-container {
+    max-width: 650px;
+    margin: 20px auto;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #f8f9fa; /* 轻微灰色背景 */
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+    .calendar-header span {
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+/* 日历表格样式 */
+.calendar-table th {
+    text-align: center;
+    background-color: #e9ecef; /* 浅灰色标题背景 */
+    color: #495057; /* 深灰字体颜色 */
+}
+
+.calendar-day {
+    height: 100px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+}
+
+    .calendar-day .price {
+        display: block;
+        margin-top: 5px;
+        font-size: 14px;
+        color: #8b645a;
+    }
+
+.disabled {
+    color: #cccccc;
+}
+
+/* 右側選單 */
+.sidebar-menu {
+    text-align: center;
+}
+
+
+
+    .sidebar-menu a {
+        display: block;
+        font-size: 16px;
+        margin: 5px 0;
+        text-decoration: none;
+        color: black;
+    }
+
+
+.active-btn {
+    background-color: #a47764;
+    color: white;
+    padding: 3px 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    min-width: 80px;
+    text-decoration: none;
+}
+
+
+
+/* 標題區塊，帶有左側黃色邊框和右側藍色橫線 */
+.notice-header {
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    border-left: 5px solid #ffb400; /* 左側黃色線條 */
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+    /* 標題右側的藍色橫線 */
+    .notice-header::after {
+        content: "";
+        flex-grow: 1;
+        height: 2px;
+        background-color: #a47764;
+        margin-left: 15px;
+    }
+
+/* 主要內容區塊，定義字體大小、行距與間距 */
+.notice-content {
+    font-size: 15px;
+    color: #333;
+    line-height: 1.8;
+    margin-top: 12px;
+}
+
+    /* 副標題加粗，確保區塊間隔清晰 */
+    .notice-content h4 {
+        font-weight: bold;
+        margin-top: 15px;
+    }
+
+/* 標題區塊，帶有左側黃色邊框和右側藍色橫線 */
+.info-header {
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    border-left: 5px solid #ffb400; /* 左側黃色線條 */
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+    /* 標題右側的藍色橫線 */
+    .info-header::after {
+        content: "";
+        flex-grow: 1;
+        height: 2px;
+        background-color: #a47764;
+        margin-left: 15px;
+    }
+
+/* 主要內容區塊，定義字體大小、行距與間距 */
+.info-content {
+    font-size: 14px;
+    color: #333;
+    line-height: 1.8;
+    margin-top: 15px;
+}
+
+
+
+/* 列表樣式 */
+.info-list {
+    list-style: none;
+    padding: 0;
+}
+
+    .info-list li {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+.check-icon {
+    color: #8b645a !important;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+
+.cross-icon {
+    color: black;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+
+/* 頁腳樣式 */
+.footer {
+    background-color: #f8f9fa;
+    padding: 40px 0;
+    font-size: 14px;
+    color: #333;
+}
+
+    .footer h5 {
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    .footer ul {
+        list-style: none;
+        padding: 0;
+    }
+
+        .footer ul li {
+            margin-bottom: 8px;
+        }
+
+            .footer ul li a {
+                text-decoration: none;
+                color: #333;
+            }
+
+                .footer ul li a:hover {
+                    text-decoration: underline;
+                }
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #666;
+}
+
+/* 针对小屏幕设备 */
+@media (max-width: 992px) {
+    .container {
+        width: 100%; /* 让日历和信息卡片在小屏幕上各占满整个容器宽度 */
+    }
+    /* 可能还需要调整字体大小、间距等 */
+
+    @media (max-width: 576px) {
+        .container {
+            max-width: 100%;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+    }
+
+    @media (max-width: 576px) {
+        .calendar-container {
+            width: 100%;
+        }
+    }
+
+    /* 手機版（<576px） */
+    @media (max-width: 576px) {
+        .container {
+            max-width: 100%;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        .calendar-container {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .row {
+            flex-direction: column;
+        }
+
+        .col-6 {
+            width: 100%;
+        }
+
+        .ticket-info {
+            font-size: 14px;
+        }
+
+        .price-card {
+            text-align: center;
+        }
+    }
+
+    /* 平板版（≥768px） */
+    @media (min-width: 768px) {
+        .container {
+            max-width: 720px;
+        }
+
+        .col-md-6 {
+            width: 50%;
+        }
+    }
+
+    /* 小筆電（≥992px） */
+    @media (min-width: 992px) {
+        .container {
+            max-width: 960px;
+        }
+
+        .col-lg-4 {
+            width: 33.33%;
+        }
+
+        .col-lg-6 {
+            width: 50%;
+        }
+    }
