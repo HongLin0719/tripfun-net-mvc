@@ -2,61 +2,12 @@
 	<!-- Swiper CSS -->
 	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
 	<link rel="stylesheet" href="~/css/Product/Information.css" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="~/css/Product/styles.css" />
 }
-<!-- 顶部蓝色条 -->
-<div class="top-bar"></div>
-
-<!-- 主导航栏 -->
-<nav class="navbar navbar-expand-lg navbar-light">
-	<div class="container-fluid">
-		<!-- 左侧 Logo -->
-		<a class="navbar-brand" href="#">
-			<img src="./IMG/logo.jpg" alt="去趣" />
-
-		</a>
-
-		<!-- 居中搜索框 -->
-		<form class="search-bar mx-auto">
-			<i class="bi bi-search search-icon"></i>
-			<input class="form-control"
-				   type="search"
-				   placeholder="輸入目的地、景點、體驗行程或活動名稱..."
-				   aria-label="Search" />
-		</form>
-
-		<!-- 右侧功能 -->
-		<div class="nav-right">
-			<span>旅遊規劃必備APP</span>
-			<span>登入/註冊</span>
-
-		</div>
-	</div>
-</nav>
-
-<!-- 可滑動導航欄 -->
-<div class="scrollable-nav">
-	<!-- 左箭頭 -->
-	<button class="scroll-btn scroll-left" onclick="scrollNav(-200)">&#10094;</button>
-
-	<!-- 可滾動內容 -->
-	<div class="nav-content" id="navScroll">
-		<a href="#" class="nav-item">美食甜點</a>
-		<a href="#" class="nav-item">景點門票</a>
-		<a href="#" class="nav-item">溫泉泡湯</a>
-		<a href="#" class="nav-item">博物館 / 美術館</a>
-		<a href="#" class="nav-item">工作坊 & 課程</a>
-		<a href="#" class="nav-item">活動 & 展覽</a>
-		<a href="#" class="nav-item">主題樂園</a>
-		<a href="#" class="nav-item">spa & 按摩</a>
-		<a href="#" class="nav-item">住宿</a>
-		<a href="#" class="nav-item">觀光行程</a>
-		<a href="#" class="nav-item">戶外活動</a>
-	</div>
-
-	<!-- 右箭頭 -->
-	<button class="scroll-btn scroll-right" onclick="scrollNav(200)">&#10095;</button>
+<div id="productIndex">
+	@await Html.PartialAsync("_ProductHeaderPartial")
 </div>
-
 
 <div class="container-md">
 	<div class="breadcrumb-container">
@@ -382,51 +333,13 @@
 	</div>
 </div>
 
-<!-- 頁腳區塊 -->
-<footer class="footer">
-	<div class="container">
-		<div class="row">
-			<!-- 第一欄：關於和泰相關 -->
-			<div class="col-md-4">
-				<h5>關於和泰相關</h5>
-				<ul>
-					<li><a href="#">和泰Points介紹</a></li>
-					<li><a href="#">和泰集團會員</a></li>
-					<li><a href="#">和泰集團會員隱私權政策</a></li>
-					<li><a href="#">和泰集團常見問題</a></li>
-					<li><a href="#">和泰集團會員條款</a></li>
-				</ul>
-			</div>
-			<!-- 第二欄：關於去趣 -->
-			<div class="col-md-4">
-				<h5>關於去趣</h5>
-				<ul>
-					<li><a href="#">FAQ專區</a></li>
-					<li><a href="#">客服專區</a></li>
-					<li><a href="#">隱私權政策</a></li>
-					<li><a href="#">免責聲明</a></li>
-					<li><a href="#">防詐騙提醒</a></li>
-					<li><a href="#">和泰集團相關服務</a></li>
-				</ul>
-			</div>
-			<!-- 第三欄：公司資訊 -->
-			<div class="col-md-4">
-				<h5>和漾旅行社股份有限公司</h5>
-				<p>旅遊商品由 和漾旅行社股份有限公司 提供</p>
-				<p>代表人：吳品璁 | 統一編號：90356017 | 旅行社註冊編號：850800 | 品保協會會員編號：北2598號</p>
-				<p>請點擊 <a href="#">客服專區</a> 專人為您服務</p>
-				<p>聯絡電話：(02)2506-2121 分機1436 週一至週五 (09:00-17:30) | 旅遊聯絡信箱：service@chictrip.com.tw</p>
-				<p>統一編號：55384114 | 地址：104台北市中山區松江路433號4樓 | 聯絡信箱：gocs@hotaigo.com.tw</p>
-			</div>
-		</div>
-		<!-- 頁腳底部 -->
-		<div class="footer-bottom">
-			Copyright © 2025 Hotai Connected Co., Ltd Powered by Hotai Motor Corporation
-		</div>
-	</div>
-</footer>
+@await Html.PartialAsync("_ProductFooterPartial")
+
 @section ENDJS {
 	<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 	<script src="~/js/Product/Information.js"></script>
-
+	<script>
+		const { createApp } = Vue;
+	</script>
+	<script src="~/js/Product/productIndex.js"></script>
 }

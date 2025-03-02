@@ -42,6 +42,27 @@
         color: var(--primary-color);
     }
 
+.category-swiper::before,
+.category-swiper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 5%;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.category-swiper::before {
+    left: -10px;
+    background: white;
+}
+
+.category-swiper::after {
+    right: -10px;
+    background: white;
+}
+
 @media screen and (max-width: 991.98px) {
 
     .header-login-text,
