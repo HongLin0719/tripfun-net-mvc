@@ -94,4 +94,8 @@
     .mobile-search {
         display: none;
     }
+
+    .search-category {
+        display: none !important;
+    }
 }
