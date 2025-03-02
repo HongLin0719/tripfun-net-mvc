@@ -1,4 +1,4 @@
-const { createApp } = Vue;
+
 const { ElIcon } = ElementPlus;
 const { Search, ShoppingCart, User, Location } = ElementPlusIconsVue;
 
